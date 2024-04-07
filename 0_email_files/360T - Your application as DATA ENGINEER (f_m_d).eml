@@ -1,0 +1,268 @@
+Received: from AM8P250MB0359.EURP250.PROD.OUTLOOK.COM (2603:10a6:20b:32a::10)
+ by PAXP250MB0700.EURP250.PROD.OUTLOOK.COM with HTTPS; Sat, 6 Apr 2024
+ 15:42:22 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=pass;
+ b=XDaBiICnGdSSuDRSz+Miw9pGOx9kTBxN18xaUKeQqMdwibu63G0GTHLdJH01G0Vli5oGBiUbT1v0W5Zvb+fbcts0CBpNbBPQPBMGVnTDNppC+DfkTb6Saudp4MFdZ5E6qEhrviBRMd3GqugHXrVuKIL2mpjkGFgHDMFTpYllx6UhdKrEC8c2469m9e9MgCmwZDeYsjhFPVeR22EUTL/fg48DaHCBOIc9ENAKqFDpNLu8OVntdgu/uDzNl35Z1YW2aDKrSt43OocHLB7Bxf6hz6t0eoDOOQqGbtl0l90q57PvvHj2YK3qsLvc+caVwD6yY/rM5IaTsqAylxDtEVniHA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=+bhs+PEz5HZocZc4PMk6K7825kv9JIZRO5n8XbS3A0I=;
+ b=HeH7J4ZTfk7uy18i9ZrBZHZRKxzG2YY7jkerCkxWS2RKJPS6Q7p9lWepBS5eJh0xrRAvTn7W5O7I3ez624WSMJap+iJ4BDBgLgoRTjy/l0LcwczYYOa/vKrivVW8kgsUFo5hIAZgFRcwxKGkBNS2QgeDw1/HVYIMzOcC0xi18AmfqqiU9BL9TfQTuGPLgaFXhtHHHcqnX013giND6O7xTni/+JV8CX9bKgoyV0u1QxUGe2K0976/4dbgoPmVU8c/TEYg35RXbHDIG9ChwT1TmCBZvJbJKKdNrEluJ3TmU4a8lGZsyRBtDpD5zmjRbbU6BSE60y/yxCM+ibXhIbX3lA==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 40.107.127.132) smtp.rcpttodomain=hotmail.com smtp.mailfrom=360t.com;
+ dmarc=pass (p=none sp=none pct=100) action=none header.from=360t.com;
+ dkim=pass (signature was verified) header.d=360t0.onmicrosoft.com; arc=pass
+ (0 oda=1 ltdi=1 spf=[1,1,smtp.mailfrom=360t.com] dkim=[1,1,header.d=360t.com]
+ dmarc=[1,1,header.from=360t.com])
+Received: from MW4PR04CA0170.namprd04.prod.outlook.com (2603:10b6:303:85::25)
+ by AM8P250MB0359.EURP250.PROD.OUTLOOK.COM (2603:10a6:20b:32a::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7409.46; Sat, 6 Apr
+ 2024 15:42:20 +0000
+Received: from MW2NAM12FT062.eop-nam12.prod.protection.outlook.com
+ (2603:10b6:303:85:cafe::98) by MW4PR04CA0170.outlook.office365.com
+ (2603:10b6:303:85::25) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7452.33 via Frontend
+ Transport; Sat, 6 Apr 2024 15:42:19 +0000
+Authentication-Results: spf=pass (sender IP is 40.107.127.132)
+ smtp.mailfrom=360t.com; dkim=pass (signature was verified)
+ header.d=360t0.onmicrosoft.com;dmarc=pass action=none
+ header.from=360t.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of 360t.com designates
+ 40.107.127.132 as permitted sender) receiver=protection.outlook.com;
+ client-ip=40.107.127.132; helo=DEU01-BE0-obe.outbound.protection.outlook.com;
+ pr=C
+Received: from DEU01-BE0-obe.outbound.protection.outlook.com (40.107.127.132)
+ by MW2NAM12FT062.mail.protection.outlook.com (10.13.181.114) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7472.14 via Frontend Transport; Sat, 6 Apr 2024 15:42:19 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:C1B107CEBA8F1D4E220873A0073FCFB8C80AB5B8F212F0BD7901A9BE7B9CF377;UpperCasedChecksum:5EE1D873C6B1478F667DFB7809F272D4CB4C47B419ADCF7ABAC58ECF7FE5ED17;SizeAsReceived:7403;Count:35
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=AbolrTuhRVz6qUup2WpNl8DRLhnqB2oFojlwZAgVH/Gchke4kaviHzm44SnAN/6glIZlI4EHT6/piOsVNsCUgeccRMJbgGfhCt4qTXMv2MFBbDfGmkZqMN8O4F8qIeowA1AwVe17HB011KsQ/anJF31B1qaqF1j8XQhYS8TdZ2BnNLynNKQCXI67wTVlaHNxg6ZThjVCeFJqP3VoWdzdw7yPk94pT8jxkM1TZDB3hKSAbkOZkgCdclV69wZ20u1Bgc70uOezvxRK1qeM+tXB3OFz9ouALPgCykhBd1q8iEP8tHMFWW209ra7GJAx04cfb/oo5DW4jdWEsBHpIJ5lSA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=+bhs+PEz5HZocZc4PMk6K7825kv9JIZRO5n8XbS3A0I=;
+ b=FH5yaYxM3sR7YOlgnW57RNBnBOjMjBostCMpztNLmOcLa9DLwva2Rg4eas2zBFZ0Z2IZK5Kz2qfgPxDIfuUjyLok6IPbPqUEQNsiQ0sOzBNaFcCKPSTdYyv2frw+5XvnlU14o+U8tCWEUEIoxIqB2btD7Gpgba1O+b5wvb9fYKnckWJtn7GgnfU4xU4BgFXDvNST/RMWhaHnwtdUkI3KTNpKSaoQXsl9GkCZzKHBLWpm9d43v82eJUz22BM8YReCn/LmEFS78sTcc0+GNjlaE0up8igNIaUulBxAIMp7Uwgl/I3QlLSSdugsbFCgon/r9BA7fUn3eLWzbYNksvrA2w==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=360t.com; dmarc=pass action=none header.from=360t.com;
+ dkim=pass header.d=360t.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=360t0.onmicrosoft.com;
+ s=selector1-360t0-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=+bhs+PEz5HZocZc4PMk6K7825kv9JIZRO5n8XbS3A0I=;
+ b=kT7Tu+jIq1NQ8JnZ67Jl6eYD/KwWgQAKRO7+MTV41+9ZvYv4U9qje2etNFqlDmhLN9O6c8GnXGOxPqxhjppGf4d3IASwhHaLM9InDKymV6ljmT4H0YrhkLvmgocvVxIPjwtCXhquA0Kb4BJVzxSps9rsWncBCiMv+lrOyOfYdpM=
+Received: from FRYP281MB3305.DEUP281.PROD.OUTLOOK.COM (2603:10a6:d10:72::13)
+ by FR6P281MB4063.DEUP281.PROD.OUTLOOK.COM (2603:10a6:d10:114::8) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7409.46; Sat, 6 Apr
+ 2024 15:42:17 +0000
+Received: from FRYP281MB3305.DEUP281.PROD.OUTLOOK.COM
+ ([fe80::132d:9968:d912:13f]) by FRYP281MB3305.DEUP281.PROD.OUTLOOK.COM
+ ([fe80::132d:9968:d912:13f%7]) with mapi id 15.20.7409.042; Sat, 6 Apr 2024
+ 15:42:16 +0000
+To: Rocco Caliandro <rocco.caliandro@hotmail.com>
+From: 360T <careers@360t.com>
+Reply-To: 360T <careers@360t.com>
+Subject: 360T - Your application as DATA ENGINEER (f/m/d)
+Message-ID: <82efbba845e50d187fd723c44dedde65@360t.com>
+Date: Sat, 06 Apr 2024 15:42:16 +0000
+Content-Type: multipart/alternative; boundary=P1i5XWWI
+X-ClientProxiedBy: FR2P281CA0125.DEUP281.PROD.OUTLOOK.COM
+ (2603:10a6:d10:9d::19) To FRYP281MB3305.DEUP281.PROD.OUTLOOK.COM
+ (2603:10a6:d10:72::13)
+Return-Path: careers@360t.com
+X-MS-TrafficTypeDiagnostic:
+ FRYP281MB3305:EE_|FR6P281MB4063:EE_|MW2NAM12FT062:EE_|AM8P250MB0359:EE_|PAXP250MB0700:EE_
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;
+X-Microsoft-Antispam-Message-Info-Original:
+ K/wfID4ci0fjWLWnqXZb/GMQxSDz/cSOlZR1OBMoNav6JmDoGBhHtc0GvJsuftNsqEG30z4wPwGv66j0tzodDMv/mvg58KuAln/gnQVkD8Os8U/CvMXRzEgmxm/HjhqsSU8Hpla6gZbGqAD/Qbif2fy+qwKL4arizyuQcA3xBwnYv/9nsdb5m8MGi5gU7MY7qIWRMxFqgxDgdaQkKE8JzbVa3i36rZkJGTC/Ej4hagYQQ+wu6nuPCyoXj9hlNG5aRTnWq2fwLmkOWxVP8bIZTyaaFfUC8uS/+rxj6GFn0ZPhW+1WjsoiUVWeEChgtywwm4GETfJnCHRcWFOdPPODgUm3aqolQgC+qty2oG7lzzvQHDVGKxK+eZCHrGcITbyee5nVdjP/GVaIKRfaUD/sO5wHadSgxqIKEKDy5c7YavS1qYzjyMm1Od5Ljpy/fm4JqD7wg+psnC8qcMXKsqmaWSZCx7XXhLqJQhwixl5fmQD6iuzjs6W0bC4+ZEX+9EUfSG+sIcdkLGRvXHUGwtLt0LzHFL12P14LagS1g4xLezWgA8ziArUawLE/J/98/4sqFvqK7Cu2h0MXodXhrrQAE7P0KQGOGW8yvWDmRFicAuMyRoKEiUzqwiqpc07Plq3e6cC4U/ZgSUhrcZeNcbxSO2xDoW17fvQ9U7mZyLwZKAOKl+2rymhqYIHsri6Lf2VQoY/WgfofVMbY+0P38QSxPILjNdUs5QxXh47GxkcJfHM=
+X-Forefront-Antispam-Report-Untrusted:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:FRYP281MB3305.DEUP281.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230031)(376005)(52116005)(366007)(1800799015)(38350700005);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-Original-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-Original-0:
+ =?utf-8?B?djg2bE90RUxCWHR2UmltZk4vOTJFanZhSGU3NStPeXlQZ2pySFpvTFVwZVZU?=
+ =?utf-8?B?NldHdGtFMm9IbWJsL0dBd2RDZzE3WkdGYkZwdWFodnUzZFd3bW1hTklYNUo1?=
+ =?utf-8?B?Y3FxbnNxS2ZqWnhJRWpJUzB3SEhuZzE3UHBjcVN0ODNLQk45eHEzNDVDa3dk?=
+ =?utf-8?B?YVh2VWxIMUg0NCtKTVBsb2x1N3gxUmlLTFlpcWFKWlBvUWtIQlU0ZEZRcWYx?=
+ =?utf-8?B?NFFvK2NEY3RBWGQwYkkxaGVWNC94TUVmUHhqVFpKWmJKU2x1aHdyOG9YSmJV?=
+ =?utf-8?B?QkdDRHRlZnNUZFFQY3habEFrYTIvMDhjS3pUMXErUTNSMGgxN1R4c0d5ZDVP?=
+ =?utf-8?B?MHJQRTFlTDBoWncvQStmYnp2aDA0bnJYNU9aR0xnanp6eW13a3N0cTNGMWRT?=
+ =?utf-8?B?c1FCa2dxaGVWVURBSzd5UUI2aURMQ1lOOGkxdHBUMU0xVGtCa0MzcHF4a1Nw?=
+ =?utf-8?B?ZUV2M2I4TXI4YXUyMmQwNWRGVG1RZzVVVmpTYnNpMzZpb2x6VmNFVGdIbVkz?=
+ =?utf-8?B?ZU90RUhxbnMrcDcrSkpMTUF0dHpmd29GcHYycSs5ZnBrSkVQZWlZc0VjRTZF?=
+ =?utf-8?B?TTBMdkxRQmhxTkZoTkRRWVg4YnBkOWFNOGtJSUxRdXpIZmNHdm5aWE92ZUhz?=
+ =?utf-8?B?Yks1Z2Fxb0NqbXFNVEU1clRQb2NaSGExeG9Ra0NQN3pGMzNzMEZJdUFKcjNO?=
+ =?utf-8?B?RUswZHlwckVaVmRWbDhOcmtkcHRtbjBESUlHSk45c0lxN0ptTVZEN3ZybHdh?=
+ =?utf-8?B?aVZ5S1lReEc1T3U5VWZiSE5WSG5aand5RnNZa0EzZVdNaGxxeGZMTDVsdWtE?=
+ =?utf-8?B?eE5oQ1NYdzJDdVdyd3ZoNWZnZGtCby9pNVYwcmEwRVZnZGE1QTdPNXI1ZjUr?=
+ =?utf-8?B?NnpDUHFhWmZKOG1uSk9mTDNpVWg1dXREUnNhKzJ2dXBYMGZ2Z2tsK2J0V3dY?=
+ =?utf-8?B?SmVuQjJhUjhOcXlKb2d1c1NaRVZkdHRxSmVYZE5WNEhRaVU0Rk0rUk1zd0V4?=
+ =?utf-8?B?TUxpZ29iVzJzeEVqYndHRy9COEVxMnJPVDJSVnh1Yjdrb0dHWjlEYjdaTWp1?=
+ =?utf-8?B?Zy84bmhGVmlwN3lmdE1hb1MxUXNTZFNFTjZOeldGcTIveG5EUnh6QkNGNmdB?=
+ =?utf-8?B?aHd4aHd2eGlKNURwdy9UZmdqRUFKSWVPMyt6bW9tS2dNc09MWURyNTlsVE9q?=
+ =?utf-8?B?R3laM0VZZlR6L01EbVBuWXdyVEwwc3VDUDRRdkVPRjZCbzZBeHV4TGFrTUxZ?=
+ =?utf-8?B?ajNXSXp1R0xPRkMzZmIxeHVnNXF2SFJWTkcrSVBSN3RWS05TWmdlUWQwSk9V?=
+ =?utf-8?B?czUrZ3RNR0dyZmRVYm5meUhVdEpvL1JrUldiWDhCN0tuRVBKZnBhZG9ibWxK?=
+ =?utf-8?B?dEN6YXU0aEtmdE1LL1ZyWVgvRVVhbEs2TTVHeVYzNktuUDY5ODFYV0ttZTFl?=
+ =?utf-8?B?NzRpK0hzMm5BbStONzR2UEJDNTAyb0FzK2txbGlDUXI0ZDlFV0dYS09JSU1z?=
+ =?utf-8?B?aDFDZy90YjlySk12ZjEzcElUajQ5dUxaTGJla0lrQ1QwbjdlUSs2eVBkUmxS?=
+ =?utf-8?B?UGdFUUh4a0hzN01TMTM1QlBHTTkwVkZnRW5HeU95L2tVZzRTUHFndFh4Y0VR?=
+ =?utf-8?B?T3hnRHpmOXhNRHBUU1hDRnMxWFZLdmNFU284SVFpMDFHTEFWK3ZsRVBsemdW?=
+ =?utf-8?B?MDhUNmhZZnpheFU4N0hBM3dVVW1LazZkc3pQOHR1b2tGeVpDTkh3OVhKU3VQ?=
+ =?utf-8?B?dkV3SHNST3ZwUHYwdzVlRXU3Q3NOT0pzVjNEQ0loQXA1bGk0cm1pTEMwRWw1?=
+ =?utf-8?B?cVR4ZGMxMTNSZWRtM25XZHUxb0pMQ1NMa3o3QllXUEZHVEdHcVlVQmd2WlJw?=
+ =?utf-8?B?dFZ3NTh2MkdOYi9CcDV6VGFSdHBIRG9NUktZZ1ZXRkRQYXpvTDllZzhqNDJC?=
+ =?utf-8?B?eG1nWk8rekFUSERKdTZWQ09oM056SWVENEFlcGlnSktyc2ZNZENDajB3MUpL?=
+ =?utf-8?B?V0hXZk8yVVhBbVhWQ01KOTdENzltVGNJT1lYdFdwRXE5a25rT01jUXc0d2RJ?=
+ =?utf-8?B?R0hLUjgrTk82OVoxMFZJSFhvSC9wN0V1Y2xvR2Fld1o0NnNGMDQ5MElBSDdV?=
+ =?utf-8?Q?oqA2Hbg8f2iVgMnFF5cbSc0ML?=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: FR6P281MB4063
+X-IncomingHeaderCount: 35
+X-MS-Exchange-Organization-ExpirationStartTime: 06 Apr 2024 15:42:19.3808
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 58993952-2842-4bea-9b2a-08dc565024c1
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ MW2NAM12FT062.eop-nam12.prod.protection.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted:
+ MW2NAM12FT062.eop-nam12.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource:
+ MW2NAM12FT062.eop-nam12.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 4/6/2024 3:38:07 PM
+X-MS-Office365-Filtering-Correlation-Id: 58993952-2842-4bea-9b2a-08dc565024c1
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 40.107.127.132
+X-SID-PRA: CAREERS@360T.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 Apr 2024 15:42:19.1924
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 58993952-2842-4bea-9b2a-08dc565024c1
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ MW2NAM12FT062.eop-nam12.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM8P250MB0359
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.9825281
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7409.037
+X-Message-Flag: Flag for follow up
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000305)(920221119095)(90000117)(920221120095)(90005022)(91005020)(91035115)(9050020)(9100341)(944500132)(2008001134)(2008121020)(4810010)(4910033)(9575002)(10195002)(9320005)(120001);
+X-Message-Info:
+	qZelhIiYnPkISAw+X90IncKsDJpdQu4exwfe37mmq8Fs72CS8le2xRa/d1onG+LlcnKLTzoPb5F6mSVMfxqp6UK3xvF5vfaHiZhd1rN3Jbl+hUPK45H4hNcqc90/4o6EZb6pui9XtH/mrNGqM/bhCxJhqF5cdkchTFgH14yxuNEgmOL12sSWRsdsSIohnXVvV/ObaIhYYC4=
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0z
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZE9BSGJPUHo3dDRhV3ZxdXpTMG5CSnhSTFh5aExNNG9NWjVRa3Q4bmJxOVc5?=
+ =?utf-8?B?YnNiNE1Icy9aWGxka1BXLzVuTHM0T1gxaGRoZUw4bDNKODQrd2Zja3NHcDJL?=
+ =?utf-8?B?UTUvTkE1SzhvSUVjcFBsRVJteTdIakU5MGNqVU1sWjZBYVNmRDhqS2RVUDkz?=
+ =?utf-8?B?dVJxU3lWd2p5VkhCYlc4RGcxdXpqU0JuNEdvUkRWL3NUcXlDTHRRelgyR1VQ?=
+ =?utf-8?B?UFVtQnNaa0lERUdMSDRFMW1FWk1DbEordDh6OTk3cTJJa1ZJWktLLytyam85?=
+ =?utf-8?B?c2hFNUpraXJ5R3doN29uMS9XeG1kTUF6dEIzMWJUTzh5S3hLRHpORVFZMmx4?=
+ =?utf-8?B?NlFPSFE1MkZsNU9QL0MwVWUxSndLeDUrRTdHZDIzRDdJalphQUVVQXpXOGhL?=
+ =?utf-8?B?b21XWTlZcHk5bHZjd3pDc2JOVVkxM2M5YXFjNS9RNXBUUVJWTlpjL2JRamd4?=
+ =?utf-8?B?UU9yYkpSVGJBZmU4bnYxckFTRkxQaWNLVzR1S2ZENWxGYjNwWlR0Z1BjNTRO?=
+ =?utf-8?B?N2JwN2FqRzJnOEFuM3NkeFFZbEo1YXFHTVpXZ3lwZ2hHUlNZS0xqa3dOUEVj?=
+ =?utf-8?B?c0NRQ0RuU2RkMnZGNmM0MkJTZDZ1YmVRWE8vU1FRVEs1VitGZ3FBalJnYm5x?=
+ =?utf-8?B?UHpzSEtXUDNyS2tMNkozZ3BGUHQyNUVGV05wZTY4UGoxWkJHQ1JqRjgra3Nm?=
+ =?utf-8?B?Zndod2hVc2gzcklDM3pZVFkwZEpjYUJTOEpnVk9kcFhLcnhsMFV0bkRJZzVC?=
+ =?utf-8?B?ZVcxMXFkZ2R5WStTNThBWWo5aWNEN2t2QjN5STdUOWNrUEg3dUllbCsxZ0xo?=
+ =?utf-8?B?RnVPeWx3WEI0Y3lrMG92SEhQbFJMSzNmaXRFdHNWams1aG1ZbTBCMUtZRFJP?=
+ =?utf-8?B?QXFodHVKN25pT0ZXSzdrUGJqb2pqWXRQeW10RFVQdk1mUGpydFVpMXE1blE1?=
+ =?utf-8?B?TEFMbHc4bmx0RWdPQWZoeGk2QmhVeWc5M1NHWmZSZFFPZnQrUHRabjNrSkFF?=
+ =?utf-8?B?WGlPQ1FTb2lhVnA0bElNMCttdURzMFlkbFJ2eWkxdFN5bDRQWUlIYlpNTEVS?=
+ =?utf-8?B?Q240VTF5MWVpNENheEZlQTdNWFFrZXExRWxBaDBtT3djZVU2WVVxVWlVVkFT?=
+ =?utf-8?B?ZkZQQXdzMUxUQ0hra3dLOElrQmlIUHBwaHhLTDNVZmdML0hsN2ZIRWhqTnFL?=
+ =?utf-8?B?bk9mNURaR0ZRTWxhWlMwTXUrWEFCWTJlQzBPdkJQbEVrVE5ZVHlpa1ZRNDhz?=
+ =?utf-8?B?SFpBQU9VZ3ZwYlpacERYL2FuUEllVWNCU2xxUHp3ZXJ2SWc3QlkwaVdsUHpJ?=
+ =?utf-8?B?TWNKSW1RMk1zOGlDaWtDa0Y1eTNGdVgrQWhwVXRGNzhNdHNpOUJsL3pvVEpl?=
+ =?utf-8?B?ZDVkNTl0dXJBRXRRSURJOFlCYk1hWkhidWRsM0txTGljYzAzbTNQRXVEbEI1?=
+ =?utf-8?B?a2M4OTFkc0wzb1NsYjE0RmxsRVJFa21XK3FtNU9tTy9tQWcwMDdibXVKdHNS?=
+ =?utf-8?B?SlRZRGE4ZTQwNWxTbXhyd1AzWlZ4dGJ5L0dpdU1wV0xndnZPOWxnV0s3S250?=
+ =?utf-8?B?NTIwQWpuelArUklCZVlBc1duT21FQTNKNnVhTWs2c2JhQVByWGR6MEIzNTRt?=
+ =?utf-8?B?L1JVdTVZS0lDZGpYWmt6bS85L281Nmk3WURncE9vdjRJZ2NyQXM0NGdlZUtp?=
+ =?utf-8?B?WUxDdWUvZGh6Wi8zVGt4bFBLT1hDampJV0w5VElmc1N1eXQ4dWxucnQydEVS?=
+ =?utf-8?B?OHlXZnRIK1RvQTZBaDdDQUdkYm5LZFV2V2dySW1FZmtrbjhQcFZmZk5vQ2hB?=
+ =?utf-8?B?SGl3SDg0NnZnaFVhbmRuL0JiTXNLUkVtM1p5bHlUS1cweGF0RDdBL0psYnhZ?=
+ =?utf-8?B?TmEzNjE4Q0RWRndTZENtejI0VVVEVy8wSWM0THJ4QXdEczNkcWp0dUs1NTNj?=
+ =?utf-8?B?MWdhTDArOHdDMGF6emYxdVFHNXMwcEFaYUkxSXF0Q1FIb1liNnJXTE4zNHpp?=
+ =?utf-8?Q?q/JJSQn1QMOh8jMSQ06iMNHj0kGlnI=3D?=
+MIME-Version: 1.0
+
+--P1i5XWWI
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Rocco Caliandro,
+
+Thank you for your application.
+
+We appreciate your interest in our company and the time you have invested i=
+n this application. We are currently carefully reviewing the applications. =
+Please understand that this process may take a while. We will contact you a=
+s soon as possible.
+
+Thank you for your patience.
+
+Yours sincerely,
+
+360T Careers Team Legally required information for business correspondence =
+and data protection (Gesetzliche Pflichtangaben fuer Geschaeftskorresponden=
+z und Datenschutz) may be found at http://www.360t.com/data-information
+
+--P1i5XWWI
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<span style=3D"color:rgb(0,0,0);font-family:Arial, Helvetica, sans-serif;fo=
+nt-size:14px;font-style:normal;font-weight:normal;display:inline;background=
+-color:rgb(255,255,255);">Dear Rocco&nbsp;</span><span style=3D"color:rgb(0=
+,0,0);"><span style=3D"font-family:Arial, Helvetica, sans-serif;"><span sty=
+le=3D"font-size:14px;font-family:Arial, Helvetica, sans-serif;"><span style=
+=3D"font-style:normal;font-weight:normal;display:inline;background-color:rg=
+b(255,255,255);">Caliandro,&nbsp;</span><br>
+<br style=3D"color:rgb(85,85,85);font-family:'Open Sans', 'Helvetica Neue',=
+ Helvetica, Arial, sans-serif;font-size:13px;font-style:normal;font-weight:=
+normal;background-color:rgb(255,255,255);">
+Thank you for your application.<br>
+<br>
+We appreciate your interest in our company and the time you have invested i=
+n this application. We are currently carefully reviewing the applications. =
+Please understand that this process may take a while. We will contact you a=
+s soon as possible.<br>
+<br>
+Thank you for your patience.<br>
+<br>
+Yours sincerely,</span></span><span style=3D"font-family:Arial, Helvetica, =
+sans-serif;font-size:14px;"><br>
+<br>
+</span></span><span style=3D"color:rgb(0,0,0);font-family:Arial, Helvetica,=
+ sans-serif;font-size:14px;font-style:normal;font-weight:normal;display:inl=
+ine;background-color:rgb(255,255,255);">360T Careers Team</span> Legally re=
+quired information for business correspondence
+ and data protection (Gesetzliche Pflichtangaben fuer Geschaeftskorresponde=
+nz und Datenschutz) may be found at http://www.360t.com/data-information
+</body>
+</html>
+
+--P1i5XWWI--
