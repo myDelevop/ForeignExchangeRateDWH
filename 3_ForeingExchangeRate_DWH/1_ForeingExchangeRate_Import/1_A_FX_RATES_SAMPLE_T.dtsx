@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-7P0M4LN"
   DTS:CreatorName="DESKTOP-7P0M4LN\rocco"
-  DTS:DTSID="{4761EDE6-2727-4540-B8E1-B67CB707A303}"
+  DTS:DTSID="{CB939A2D-885D-4A5D-9CC0-064303CDD1BD}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5397.1"
   DTS:LocaleID="6153"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="1_A_FX_RATES_SAMPLE_T"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{E6CFB8E3-C473-44D6-83C1-2DC111837D55}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{78AAFB5C-5C92-40AF-A3A5-328E5BF10FA3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC1zNrxPaZ9IRkzEAk8/tpc0GaqJYVa6gsJ0rQtSvSDzAAAAAAOgAAAAAIAACAAAACmmaweaskGwkxKzUJaPrUlWQc3wvMpNkGkSCIaQFLLdCAAAAAgVUzc3v2zP0sFzFQ0FO8WpuvUVjwm4663wTkeb7PSKkAAAAADiHUIg5RekH2YlWcIj6f8c3Uyrp/zvUbgD//yi0e4EJFHPUluzLLdxfuohcgHKpq+P0z/xgg0aMhJc2V0WeSP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAADmuC4vNgtKL/1Z/j5Tuc+5noEd63XSQpF/QItWT4CuQAAAAAOgAAAAAIAACAAAACHMmDOyxorY4obmD6D6NZKFPOxggoOkULf5StFX5HdVyAAAADonfet0W+FDJrCZHPTGbNvhSYET8G7ZtTtSbHgu2HStEAAAACv3kk7mnpT0g9VH6v+lYqf50xOeD23dOpjzIqugTZ0aLvuGck4l82LbvscwuMtyJ+Aaj/34a3UhRqu+lo+pAAf</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -522,13 +522,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="186,42"
-          Id="Package\IMPORT RATES_SAMPLE\TT_RATES_SAMPLE"
-          TopLeft="102.333324561517,156.324326453634" />
-        <NodeLayout
           Size="158,42"
           Id="Package\IMPORT RATES_SAMPLE\TRUNCATE"
           TopLeft="132.999992728234,39.5585590006082" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\IMPORT RATES_SAMPLE\TT_RATES_SAMPLE"
+          TopLeft="102.333324561517,156.324326453634" />
         <EdgeLayout
           Id="Package\IMPORT RATES_SAMPLE.PrecedenceConstraints[Constraint]"
           TopLeft="211.999992728234,81.5585590006082">
