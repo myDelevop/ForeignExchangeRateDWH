@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="3_A_FX_EXCHANGE_S"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{D5B40F4F-062D-4223-A311-35D1BB43B245}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{D8958995-3F76-4B4D-ABD8-AF0BCB4D7BCA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA9jJVSu8Xb8MRGOmiw/q9gSMIFykzz37Nl+EOAXzpHpgAAAAAOgAAAAAIAACAAAADZerWaX1DIuJRwq9tc37zA/O7jP4L0coRevBod6rlnVCAAAAAIOHy80OPzDXItnVRygx2Rgi+JOfp/XpctFf0jZr5ZxkAAAABB9Vk9ZxjdnGMBwFrMDvsHy7QgHRjlO5AJMdwmrlczaSitOhx1iDek3aalMALoKu3jGBmnxpeSdTRISgXGZ2ZJ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABPZttlFaCfT8M5HKlVddTUnhspXID96RFOQXImCy3gQwAAAAAOgAAAAAIAACAAAADNt7GWNbypUrvy4WlUq2oZd+v5tyX6VxGQI3vvRbtoACAAAACuxRFVj6IbkPzB8blhY67B7fvR7hQbitqjKnb1bp4ckkAAAAC+/c6FLnjs4S3JjxlXu0qYorpnkNpW4yZq9JCNGZ5oCOjuzbMphhiiTf4U3vmwiejwi4zOK2ViT46Ii+yMczSu</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -128,17 +128,17 @@
           </DTS:PrecedenceConstraints>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Staging Area for Dimensions\xxx"
+          DTS:refId="Package\Staging Area for Dimensions\DATETIME"
           DTS:CreationName="STOCK:SEQUENCE"
           DTS:Description="Contenitore Sequenza"
           DTS:DTSID="{048ce57c-5c0e-45ad-b7b8-8cb735a35eff}"
           DTS:ExecutableType="STOCK:SEQUENCE"
           DTS:LocaleID="-1"
-          DTS:ObjectName="xxx">
+          DTS:ObjectName="DATETIME">
           <DTS:Variables />
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Staging Area for Dimensions\xxx\DUMMY ROW"
+              DTS:refId="Package\Staging Area for Dimensions\DATETIME\DUMMY ROW"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Attività Esegui SQL"
               DTS:DTSID="{b6959c99-659d-4d61-b683-ebeffd15574e}"
@@ -155,7 +155,7 @@
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
-              DTS:refId="Package\Staging Area for Dimensions\xxx\S_DATETIME"
+              DTS:refId="Package\Staging Area for Dimensions\DATETIME\S_DATETIME"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Attività Esegui SQL"
               DTS:DTSID="{236c33a4-3b33-46fc-84ff-6ac666f8a744}"
@@ -172,7 +172,7 @@
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
-              DTS:refId="Package\Staging Area for Dimensions\xxx\TRUNCATE"
+              DTS:refId="Package\Staging Area for Dimensions\DATETIME\TRUNCATE"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Attività Esegui SQL"
               DTS:DTSID="{0efe2768-5441-4536-afa6-b91d1b5bf93f}"
@@ -191,21 +191,21 @@
           </DTS:Executables>
           <DTS:PrecedenceConstraints>
             <DTS:PrecedenceConstraint
-              DTS:refId="Package\Staging Area for Dimensions\xxx.PrecedenceConstraints[Vincolo]"
+              DTS:refId="Package\Staging Area for Dimensions\DATETIME.PrecedenceConstraints[Vincolo]"
               DTS:CreationName=""
               DTS:DTSID="{80b869db-761b-45e4-842c-5f477a272be3}"
-              DTS:From="Package\Staging Area for Dimensions\xxx\TRUNCATE"
+              DTS:From="Package\Staging Area for Dimensions\DATETIME\TRUNCATE"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Vincolo"
-              DTS:To="Package\Staging Area for Dimensions\xxx\S_DATETIME" />
+              DTS:To="Package\Staging Area for Dimensions\DATETIME\S_DATETIME" />
             <DTS:PrecedenceConstraint
-              DTS:refId="Package\Staging Area for Dimensions\xxx.PrecedenceConstraints[Vincolo 1]"
+              DTS:refId="Package\Staging Area for Dimensions\DATETIME.PrecedenceConstraints[Vincolo 1]"
               DTS:CreationName=""
               DTS:DTSID="{7273bf16-17f2-4605-9954-41d9669ddb97}"
-              DTS:From="Package\Staging Area for Dimensions\xxx\S_DATETIME"
+              DTS:From="Package\Staging Area for Dimensions\DATETIME\S_DATETIME"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Vincolo 1"
-              DTS:To="Package\Staging Area for Dimensions\xxx\DUMMY ROW" />
+              DTS:To="Package\Staging Area for Dimensions\DATETIME\DUMMY ROW" />
           </DTS:PrecedenceConstraints>
         </DTS:Executable>
       </DTS:Executables>
@@ -217,7 +217,7 @@
           DTS:From="Package\Staging Area for Dimensions\CURRENCY"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Vincolo"
-          DTS:To="Package\Staging Area for Dimensions\xxx" />
+          DTS:To="Package\Staging Area for Dimensions\DATETIME" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
@@ -234,13 +234,17 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="139,42"
-          Id="Package\Staging Area for Dimensions\CURRENCY\TRUNCATE"
-          TopLeft="34,27" />
+          Size="150,42"
+          Id="Package\Staging Area for Dimensions\CURRENCY\DUMMY ROW"
+          TopLeft="84,208" />
         <NodeLayout
           Size="155,42"
           Id="Package\Staging Area for Dimensions\CURRENCY\S_CURRENCY"
           TopLeft="116,103" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Staging Area for Dimensions\CURRENCY\TRUNCATE"
+          TopLeft="34,27" />
         <EdgeLayout
           Id="Package\Staging Area for Dimensions\CURRENCY.PrecedenceConstraints[Vincolo]"
           TopLeft="103.5,69">
@@ -275,10 +279,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Staging Area for Dimensions\CURRENCY\DUMMY ROW"
-          TopLeft="84,208" />
         <EdgeLayout
           Id="Package\Staging Area for Dimensions\CURRENCY.PrecedenceConstraints[Vincolo 1]"
           TopLeft="193.5,145">
@@ -322,18 +322,18 @@
           TopLeft="52,46" />
         <NodeLayout
           Size="150,42"
-          Id="Package\Staging Area for Dimensions\xxx\DUMMY ROW"
+          Id="Package\Staging Area for Dimensions\DATETIME\DUMMY ROW"
           TopLeft="84,208" />
         <NodeLayout
           Size="148,42"
-          Id="Package\Staging Area for Dimensions\xxx\S_DATETIME"
+          Id="Package\Staging Area for Dimensions\DATETIME\S_DATETIME"
           TopLeft="116,103" />
         <NodeLayout
           Size="139,42"
-          Id="Package\Staging Area for Dimensions\xxx\TRUNCATE"
+          Id="Package\Staging Area for Dimensions\DATETIME\TRUNCATE"
           TopLeft="34,27" />
         <EdgeLayout
-          Id="Package\Staging Area for Dimensions\xxx.PrecedenceConstraints[Vincolo]"
+          Id="Package\Staging Area for Dimensions\DATETIME.PrecedenceConstraints[Vincolo]"
           TopLeft="103.5,69">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -367,7 +367,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Staging Area for Dimensions\xxx.PrecedenceConstraints[Vincolo 1]"
+          Id="Package\Staging Area for Dimensions\DATETIME.PrecedenceConstraints[Vincolo 1]"
           TopLeft="190,145">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -405,7 +405,7 @@
           IsExpanded="True"
           PanelSize="316,307"
           Size="316,350"
-          Id="Package\Staging Area for Dimensions\xxx"
+          Id="Package\Staging Area for Dimensions\DATETIME"
           TopLeft="502.571428571429,272.142857142857" />
         <EdgeLayout
           Id="Package\Staging Area for Dimensions.PrecedenceConstraints[Vincolo]"

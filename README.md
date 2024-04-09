@@ -96,5 +96,16 @@ CREATE TABLE [dbo].[A_FX_EXCHANGE_S_DATETIME](
 	Day int NULL,
 	Semester int NOT NULL,
 	Quarter int NULL
-) ON [PRIMARY]
+)
 
+
+CREATE TABLE [dbo].[B_FX_EXCHANGE_SF_EXCHANGE_RATE] (
+	eventIds int,
+	eventId bigint,
+	eventTimeIds int,
+	yesterdayNYTimeIds int,
+	baseCurrencyIds int,
+	quoteCurrencyIds int,
+	currentRate float,
+	changePercentage float
+)

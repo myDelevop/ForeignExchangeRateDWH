@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="3_A_FX_EXCHANGE_S"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{FACC3ED5-CC4A-42E9-80F1-B401AE094465}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{D8958995-3F76-4B4D-ABD8-AF0BCB4D7BCA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACRsshd/iZazTurR4eJoSKxqIx7RdrfHRNMuGBueTB+XgAAAAAOgAAAAAIAACAAAACOqQ9QOCHKjG0GQ9P+MS/G8gnghqeHErfVTsmeThwP8CAAAADLv7pahiIJLWHSgN6lKv8G8DZ8O0KQcghENM74TGxbNEAAAACVuduzfwRbxbBnGsmocS432qWGIHHt6/BgXgVYXwsjhPXKoXwjkvEw8jQe+ILj9uEvkKkcDljZMVQDH9MT0OA+</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC3JRKNkIBBpReeMRjqBvC77AU21T4oH4HnLrD9cOStFAAAAAAOgAAAAAIAACAAAABwM7UXkURZ1gVfKooN8NgMZ5eHcFnAE++ZVTpHXpBi6yAAAACPfnXjjaFYVuXCMHsXEzFzKgGUGSFrLwrNs5XrUjL/8kAAAAAEEYVznQ8u70Mf38O4Xif3U/8ZhvkvSRg6hTni8RkrREOgoCuYvcTSyN58gB1scJF5LgqHGi15BDTa84SbRuYU</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -234,13 +234,17 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="139,42"
-          Id="Package\Staging Area for Dimensions\CURRENCY\TRUNCATE"
-          TopLeft="34,27" />
+          Size="150,42"
+          Id="Package\Staging Area for Dimensions\CURRENCY\DUMMY ROW"
+          TopLeft="84,208" />
         <NodeLayout
           Size="155,42"
           Id="Package\Staging Area for Dimensions\CURRENCY\S_CURRENCY"
           TopLeft="116,103" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Staging Area for Dimensions\CURRENCY\TRUNCATE"
+          TopLeft="34,27" />
         <EdgeLayout
           Id="Package\Staging Area for Dimensions\CURRENCY.PrecedenceConstraints[Vincolo]"
           TopLeft="103.5,69">
@@ -275,10 +279,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Staging Area for Dimensions\CURRENCY\DUMMY ROW"
-          TopLeft="84,208" />
         <EdgeLayout
           Id="Package\Staging Area for Dimensions\CURRENCY.PrecedenceConstraints[Vincolo 1]"
           TopLeft="193.5,145">
