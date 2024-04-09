@@ -1,6 +1,6 @@
 /*
-Run the following script on the locahost (or servername) instance in the SQL Server DB.
-This allow us to create the databases in SQL Server that will contain our datawarehouse.
+Run the following script on the localhost (or servername) instance in the SQL Server DB.
+This allows us to create the databases in SQL Server that will contain our datawarehouse.
 
 Another important think, it should be enable the login with username and password rather
 than the Windows authentication in order to create connectors from Visual Studio
