@@ -1,0 +1,455 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/9/2024 12:06:34 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CO-CO"
+  DTS:CreatorName="CO-CO\cosimo"
+  DTS:DTSID="{553A183C-69CA-4072-A1D1-44B8DBF25B5F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="3_A_FX_EXCHANGE_S"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{D5B40F4F-062D-4223-A311-35D1BB43B245}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.SA_FX_EXCHANGE.fxUserDWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{932278A3-77FA-4997-9D77-1A3F2974852B}"
+      DTS:ObjectName="localhost.SA_FX_EXCHANGE.fxUserDWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=fxUserDWH;Initial Catalog=SA_FX_EXCHANGE;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-3_A_FX_EXCHANGE_S-{932278A3-77FA-4997-9D77-1A3F2974852B}localhost.SA_FX_EXCHANGE.fxUserDWH;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA9jJVSu8Xb8MRGOmiw/q9gSMIFykzz37Nl+EOAXzpHpgAAAAAOgAAAAAIAACAAAADZerWaX1DIuJRwq9tc37zA/O7jP4L0coRevBod6rlnVCAAAAAIOHy80OPzDXItnVRygx2Rgi+JOfp/XpctFf0jZr5ZxkAAAABB9Vk9ZxjdnGMBwFrMDvsHy7QgHRjlO5AJMdwmrlczaSitOhx1iDek3aalMALoKu3jGBmnxpeSdTRISgXGZ2ZJ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Staging Area for Dimensions"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Contenitore Sequenza"
+      DTS:DTSID="{5CD64A6D-39DB-45A1-A0E6-C3A5B9A7A713}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Staging Area for Dimensions">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Staging Area for Dimensions\CURRENCY"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Contenitore Sequenza"
+          DTS:DTSID="{FB856240-9ED1-4A1D-B083-F398904C4D3A}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="CURRENCY">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Staging Area for Dimensions\CURRENCY\DUMMY ROW"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Attività Esegui SQL"
+              DTS:DTSID="{D5987579-795B-493F-A643-E48B400BB59C}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="DUMMY ROW"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{932278A3-77FA-4997-9D77-1A3F2974852B}"
+                  SQLTask:SqlStatementSource="SET IDENTITY_INSERT A_FX_EXCHANGE_S_CURRENCY ON;&#xA;&#xA;INSERT INTO A_FX_EXCHANGE_S_CURRENCY(CurrencyIds, Name, Description)&#xA;VALUES(-1, 'N/A', 'N/A')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Staging Area for Dimensions\CURRENCY\S_CURRENCY"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Attività Esegui SQL"
+              DTS:DTSID="{04883D78-9BDE-493E-8B6C-0799F4A092B8}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="S_CURRENCY"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{932278A3-77FA-4997-9D77-1A3F2974852B}"
+                  SQLTask:SqlStatementSource="SELECT DISTINCT B.currency as Name&#xA;INTO #S_CURRENCY_TEMP_1&#xA;FROM (&#xA;&#x9;SELECT DISTINCT A.ccyCouple,&#xA;&#x9;&#x9;SUBSTRING(A.ccyCouple, 1, 3) AS currency&#xA;&#x9;FROM IM_FX_EXCHANGE..A_FX_EXCHANGE_T_RATES_SAMPLE A&#xA;&#x9;UNION&#xA;&#x9;SELECT DISTINCT A.ccyCouple,&#xA;&#x9;&#x9;RIGHT(A.ccyCouple, 3) AS currency&#xA;&#x9;FROM IM_FX_EXCHANGE..A_FX_EXCHANGE_T_RATES_SAMPLE A&#xA;) B&#xA;&#xA;&#xA;SELECT IDENTITY(INT, 1,1) AS CurrencyIds,&#xA;&#x9;A.Name,&#xA;&#x9;CASE WHEN Name = 'AUD' THEN 'Australian Dollar'&#xA;&#x9;&#x9; WHEN Name = 'EUR' THEN 'Euro'&#xA;&#x9;&#x9; WHEN Name = 'GBP' THEN 'Brithish Pound Sterling'&#xA;&#x9;&#x9; WHEN Name = 'NZD' THEN 'New Zealand Dollar'&#xA;&#x9;&#x9; WHEN Name = 'USD' THEN 'United States Dollar'&#xA;&#x9;ELSE 'Other' END AS Description&#xA;INTO #S_CURRENCY_TEMP_2&#xA;FROM #S_CURRENCY_TEMP_1 A&#xA;&#xA;&#xA;SET IDENTITY_INSERT A_FX_EXCHANGE_S_CURRENCY ON;&#xA;&#xA;INSERT INTO A_FX_EXCHANGE_S_CURRENCY(CurrencyIds, Name, Description)&#xA;SELECT *&#xA;FROM #S_CURRENCY_TEMP_2 A&#xA;&#xA;DROP TABLE #S_CURRENCY_TEMP_1&#xA;DROP TABLE #S_CURRENCY_TEMP_2&#xA;&#xA;-- SELECT * FROM A_FX_EXCHANGE_S_CURRENCY" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Staging Area for Dimensions\CURRENCY\TRUNCATE"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Attività Esegui SQL"
+              DTS:DTSID="{F6F83DB5-3094-4889-8578-A4307ACEDC90}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="TRUNCATE"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{932278A3-77FA-4997-9D77-1A3F2974852B}"
+                  SQLTask:SqlStatementSource="IF OBJECT_ID('A_FX_EXCHANGE_S_CURRENCY') IS NOT NULL&#xA;TRUNCATE TABLE A_FX_EXCHANGE_S_CURRENCY" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Staging Area for Dimensions\CURRENCY.PrecedenceConstraints[Vincolo]"
+              DTS:CreationName=""
+              DTS:DTSID="{0476D2AC-6215-4DEA-814D-8673A5809490}"
+              DTS:From="Package\Staging Area for Dimensions\CURRENCY\TRUNCATE"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Vincolo"
+              DTS:To="Package\Staging Area for Dimensions\CURRENCY\S_CURRENCY" />
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Staging Area for Dimensions\CURRENCY.PrecedenceConstraints[Vincolo 1]"
+              DTS:CreationName=""
+              DTS:DTSID="{E1BDFC5C-6D6C-4020-AB26-7EAF43FE6928}"
+              DTS:From="Package\Staging Area for Dimensions\CURRENCY\S_CURRENCY"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Vincolo 1"
+              DTS:To="Package\Staging Area for Dimensions\CURRENCY\DUMMY ROW" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Staging Area for Dimensions\xxx"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Contenitore Sequenza"
+          DTS:DTSID="{048ce57c-5c0e-45ad-b7b8-8cb735a35eff}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="xxx">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Staging Area for Dimensions\xxx\DUMMY ROW"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Attività Esegui SQL"
+              DTS:DTSID="{b6959c99-659d-4d61-b683-ebeffd15574e}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="DUMMY ROW"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{932278A3-77FA-4997-9D77-1A3F2974852B}"
+                  SQLTask:SqlStatementSource="SET IDENTITY_INSERT A_FX_EXCHANGE_S_DATETIME ON;&#xA;&#xA;INSERT INTO A_FX_EXCHANGE_S_DATETIME(DatetimeIds, eventTime, Datetime, Date, Year, Month, Day, Semester, Quarter)&#xA;VALUES(-1, -1,NULL, NULL, -1, -1, -1, -1, -1)&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Staging Area for Dimensions\xxx\S_DATETIME"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Attività Esegui SQL"
+              DTS:DTSID="{236c33a4-3b33-46fc-84ff-6ac666f8a744}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="S_DATETIME"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{932278A3-77FA-4997-9D77-1A3F2974852B}"
+                  SQLTask:SqlStatementSource="SELECT DISTINCT eventTime,&#xA;&#x9;DATEADD(MILLISECOND, eventTime % 1000, DATEADD(SECOND, eventTime / 1000, '19700101')) AS Datetime&#xA;INTO #S_DATETIME_TMP_1&#xA;FROM IM_FX_EXCHANGE..A_FX_EXCHANGE_T_RATES_SAMPLE&#xA;&#xA;&#xA;SELECT IDENTITY(INT, 1,1) AS DatetimeIds,&#xA;&#x9;A.eventTime,&#xA;&#x9;A.Datetime,&#xA;&#x9;CONVERT(DATE, A.Datetime) AS Date,&#xA;&#x9;YEAR(A.Datetime) AS Year,&#xA;&#x9;MONTH(A.Datetime) AS Month,&#xA;&#x9;Day(A.Datetime) AS Day,&#xA;&#x9;CASE WHEN DATEPART(quarter, A.Datetime) &gt;= 3 THEN 2 ELSE 1 END as Semester,&#xA;&#x9;DATEPART(quarter, A.Datetime) as Quarter&#xA;INTO #S_DATETIME_TMP_2&#xA;FROM #S_DATETIME_TMP_1 A&#xA;&#xA;&#xA;&#xA;SET IDENTITY_INSERT A_FX_EXCHANGE_S_DATETIME ON;&#xA;&#xA;INSERT INTO A_FX_EXCHANGE_S_DATETIME(DatetimeIds, eventTime, Datetime, Date, Year, Month, Day, Semester, Quarter)&#xA;SELECT *&#xA;FROM #S_DATETIME_TMP_2 A&#xA;&#xA;DROP TABLE #S_DATETIME_TMP_1&#xA;DROP TABLE #S_DATETIME_TMP_2&#xA;&#xA;-- SELECT * FROM A_FX_EXCHANGE_S_DATETIME&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Staging Area for Dimensions\xxx\TRUNCATE"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Attività Esegui SQL"
+              DTS:DTSID="{0efe2768-5441-4536-afa6-b91d1b5bf93f}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="TRUNCATE"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{932278A3-77FA-4997-9D77-1A3F2974852B}"
+                  SQLTask:SqlStatementSource="IF OBJECT_ID('A_FX_EXCHANGE_S_DATETIME') IS NOT NULL&#xA;TRUNCATE TABLE A_FX_EXCHANGE_S_DATETIME" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Staging Area for Dimensions\xxx.PrecedenceConstraints[Vincolo]"
+              DTS:CreationName=""
+              DTS:DTSID="{80b869db-761b-45e4-842c-5f477a272be3}"
+              DTS:From="Package\Staging Area for Dimensions\xxx\TRUNCATE"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Vincolo"
+              DTS:To="Package\Staging Area for Dimensions\xxx\S_DATETIME" />
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Staging Area for Dimensions\xxx.PrecedenceConstraints[Vincolo 1]"
+              DTS:CreationName=""
+              DTS:DTSID="{7273bf16-17f2-4605-9954-41d9669ddb97}"
+              DTS:From="Package\Staging Area for Dimensions\xxx\S_DATETIME"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Vincolo 1"
+              DTS:To="Package\Staging Area for Dimensions\xxx\DUMMY ROW" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Staging Area for Dimensions.PrecedenceConstraints[Vincolo]"
+          DTS:CreationName=""
+          DTS:DTSID="{6A226261-BB49-4D7D-A6BF-5ECF6F585D8C}"
+          DTS:From="Package\Staging Area for Dimensions\CURRENCY"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Vincolo"
+          DTS:To="Package\Staging Area for Dimensions\xxx" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Staging Area for Dimensions\CURRENCY\TRUNCATE"
+          TopLeft="34,27" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Staging Area for Dimensions\CURRENCY\S_CURRENCY"
+          TopLeft="116,103" />
+        <EdgeLayout
+          Id="Package\Staging Area for Dimensions\CURRENCY.PrecedenceConstraints[Vincolo]"
+          TopLeft="103.5,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90,34"
+              Start="0,0"
+              End="90,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="86,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="86,17"
+                    Point2="90,17"
+                    Point3="90,21" />
+                  <mssgle:LineSegment
+                    End="90,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Staging Area for Dimensions\CURRENCY\DUMMY ROW"
+          TopLeft="84,208" />
+        <EdgeLayout
+          Id="Package\Staging Area for Dimensions\CURRENCY.PrecedenceConstraints[Vincolo 1]"
+          TopLeft="193.5,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-34.5,63"
+              Start="0,0"
+              End="-34.5,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="-4,31.5" />
+                  <mssgle:LineSegment
+                    End="-30.5,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-30.5,31.5"
+                    Point2="-34.5,31.5"
+                    Point3="-34.5,35.5" />
+                  <mssgle:LineSegment
+                    End="-34.5,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="316,307"
+          Size="316,350"
+          Id="Package\Staging Area for Dimensions\CURRENCY"
+          TopLeft="52,46" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Staging Area for Dimensions\xxx\DUMMY ROW"
+          TopLeft="84,208" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Staging Area for Dimensions\xxx\S_DATETIME"
+          TopLeft="116,103" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Staging Area for Dimensions\xxx\TRUNCATE"
+          TopLeft="34,27" />
+        <EdgeLayout
+          Id="Package\Staging Area for Dimensions\xxx.PrecedenceConstraints[Vincolo]"
+          TopLeft="103.5,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.5,34"
+              Start="0,0"
+              End="86.5,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="82.5,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="82.5,17"
+                    Point2="86.5,17"
+                    Point3="86.5,21" />
+                  <mssgle:LineSegment
+                    End="86.5,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Staging Area for Dimensions\xxx.PrecedenceConstraints[Vincolo 1]"
+          TopLeft="190,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31,63"
+              Start="0,0"
+              End="-31,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="-4,31.5" />
+                  <mssgle:LineSegment
+                    End="-27,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27,31.5"
+                    Point2="-31,31.5"
+                    Point3="-31,35.5" />
+                  <mssgle:LineSegment
+                    End="-31,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="316,307"
+          Size="316,350"
+          Id="Package\Staging Area for Dimensions\xxx"
+          TopLeft="502.571428571429,272.142857142857" />
+        <EdgeLayout
+          Id="Package\Staging Area for Dimensions.PrecedenceConstraints[Vincolo]"
+          TopLeft="368,221">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="134.571428571429,226.142857142857"
+              Start="0,0"
+              End="127.071428571429,226.142857142857">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="63.2857142857143,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="63.2857142857143,0"
+                    Point2="67.2857142857143,0"
+                    Point3="67.2857142857143,4" />
+                  <mssgle:LineSegment
+                    End="67.2857142857143,222.142857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.2857142857143,222.142857142857"
+                    Point2="67.2857142857143,226.142857142857"
+                    Point3="71.2857142857143,226.142857142857" />
+                  <mssgle:LineSegment
+                    End="127.071428571429,226.142857142857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="902,683"
+          Size="902,726"
+          Id="Package\Staging Area for Dimensions"
+          TopLeft="30,63" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

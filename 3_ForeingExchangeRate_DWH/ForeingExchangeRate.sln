@@ -7,6 +7,8 @@ Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "1_ForeingExchangeRate_Impor
 EndProject
 Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "2_ForeignExchangeRate_Cleaning", "2_ForeignExchangeRate_Cleaning\2_ForeignExchangeRate_Cleaning.dtproj", "{B40E5313-3185-4857-82D1-4D945326C269}"
 EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "3_ForeignExchangeRate_SA", "3_ForeignExchangeRate_SA\3_ForeignExchangeRate_SA.dtproj", "{04707070-064A-4BA8-8220-0A0263D74C70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
@@ -16,6 +18,8 @@ Global
 		{1C069139-0552-493A-BA5B-408DACA46BB0}.Development|Default.Build.0 = Development
 		{B40E5313-3185-4857-82D1-4D945326C269}.Development|Default.ActiveCfg = Development
 		{B40E5313-3185-4857-82D1-4D945326C269}.Development|Default.Build.0 = Development
+		{04707070-064A-4BA8-8220-0A0263D74C70}.Development|Default.ActiveCfg = Development
+		{04707070-064A-4BA8-8220-0A0263D74C70}.Development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

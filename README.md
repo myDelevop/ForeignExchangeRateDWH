@@ -76,3 +76,25 @@ CREATE TABLE A_FX_EXCHANGE_E_RATES_SAMPLE (
 date datetime,
 sourceError varchar(120),
 errorMessage varchar(600));
+
+
+USE SA_FX_EXCHANGE;
+
+CREATE TABLE [dbo].[A_FX_EXCHANGE_S_CURRENCY](
+	CurrencyIds int IDENTITY(1,1) NOT NULL,
+	Name varchar(3),
+	Description varchar(23) NOT NULL
+)
+
+CREATE TABLE [dbo].[A_FX_EXCHANGE_S_DATETIME](
+	DatetimeIds int IDENTITY(1,1) NOT NULL,
+	eventTime bigint NULL,
+	Datetime datetime NULL,
+	Date date NULL,
+	Year int NULL,
+	Month int NULL,
+	Day int NULL,
+	Semester int NOT NULL,
+	Quarter int NULL
+) ON [PRIMARY]
+
