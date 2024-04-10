@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="4/10/2024 11:29:57 AM"
+  DTS:CreationDate="4/10/2024 11:42:37 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="CO-CO"
   DTS:CreatorName="CO-CO\cosimo"
-  DTS:DTSID="{C6A98E7A-5924-4A1C-802E-B10462015F31}"
+  DTS:DTSID="{624A4E00-4BAE-4590-B930-5D5C66294007}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5397.1"
   DTS:LocaleID="1040"
-  DTS:ObjectName="4_A_FX_EXCHANGE_L"
+  DTS:ObjectName="4_B_FX_EXCHANGE_F"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{B1B2832C-EABA-401A-84AB-1A894E0D7B5A}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{103042E6-25DC-4C6C-BE12-EE00CCF76621}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADp44fJGaNyKPyHOtVdj/pxEWgCoiz+iXlt38zcJltbdQAAAAAOgAAAAAIAACAAAAAmvnTMFYX01rIWCtAxMLxXXvIPw7184C+uYeyuVIpL/yAAAACR6fATeAWc7a9vFVcEVxW0HgMWag1w+ZfU51Jz/nvqRkAAAADaAfUh+XsD72UWkOzSIQdh/rkwZ9zIO0yiq671vWCo0vhH170Ov/BLIZ4+o7GmbpaR1l103V0rBfVmazZ2LVuZ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACfZPaR9XqBH2LSyYB28/S4dB8d02b/sZv/LX6ZKur6mgAAAAAOgAAAAAIAACAAAADC2S/64NvHlNvHTrxYGgtbIDc3yFul1kJWYKqd+YcJaiAAAABwSZo5VVorQyaV54uh6f2XSArqfwYQRuLWMQ25Rqf7CEAAAADSPv+Qugnrwq9DG0dMNXMpFtioLWlJU7SwmZfYv/l2kl+1xjRjmRcNIw5h1e9HiLVkLMN2Al24qQ17TsBnq4Fj</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD90rHhJctcCZY7mO6yTbaVMnEBBCE5oRUnUoi1ajhF5AAAAAAOgAAAAAIAACAAAAD8NY7VMafRldPnXmHrepOyc46ifT46DzpPbKSIFLdWfiAAAAAVCDIRpucxmMW0GFXuCyNI1tll0I8NlhMfKu3kiTMkKUAAAABuaaUeLLZV7CoMcGU+PcFMbI2oWgyVEyLab/9YwPTlMZwjjTSNiIUyrLUA1PG7F/xtE3Q8KbzBo/zk2o4dYSlX</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC8ZRBhpAawMa1aRNaE8lbiW4eEtRlmdHrCg3DB2U8XLQAAAAAOgAAAAAIAACAAAACLl32pZAxu4PJyu1+PNxYEewKGcIn4cSg32ffys2OcGSAAAAAgoiHsqzMZAVCV3EhalUkqHFkc1JfS2hLpRpxcpydWuUAAAACrVdE1jqs1IharinWhSzAE2rzD59fx7LcliYnp+RBCgyO6geD8Z+UQWfbHi0xgzism4MUmwfM0GrCgAGkcnNYO</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -54,33 +54,33 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Creation of Dimensions in DM"
+      DTS:refId="Package\Contenitore Sequenza"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Contenitore Sequenza"
-      DTS:DTSID="{D724F90B-F913-45AF-B081-35A446DE10AE}"
+      DTS:DTSID="{49726D02-CCB3-47BC-99D4-EE897B718EF0}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Creation of Dimensions in DM">
+      DTS:ObjectName="Contenitore Sequenza">
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Creation of Dimensions in DM\CURRENCY"
+          DTS:refId="Package\Contenitore Sequenza\F_CURRENCY_RATE"
           DTS:CreationName="STOCK:SEQUENCE"
           DTS:Description="Contenitore Sequenza"
-          DTS:DTSID="{00B85285-DC82-4744-A57A-913A5C267212}"
+          DTS:DTSID="{57f7eb3a-b8f1-4d6e-88e7-2a4a7dd02e4e}"
           DTS:ExecutableType="STOCK:SEQUENCE"
           DTS:LocaleID="-1"
-          DTS:ObjectName="CURRENCY">
+          DTS:ObjectName="F_CURRENCY_RATE">
           <DTS:Variables />
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY"
+              DTS:refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE"
               DTS:CreationName="Microsoft.Pipeline"
               DTS:Description="Attività Flusso di dati"
-              DTS:DTSID="{6B13C1EC-CE76-4FB4-AB35-6EF15C08C419}"
+              DTS:DTSID="{f87487fa-fc23-4a08-b171-d45c217fb1d9}"
               DTS:ExecutableType="Microsoft.Pipeline"
               DTS:LocaleID="-1"
-              DTS:ObjectName="L_CURRENCY"
+              DTS:ObjectName="F_CURRENCY_RATE"
               DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -88,11 +88,11 @@
                   version="1">
                   <components>
                     <component
-                      refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY"
+                      refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE"
                       componentClassID="Microsoft.OLEDBDestination"
                       contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
                       description="Destinazione OLE DB"
-                      name="L_CURRENCY"
+                      name="F_CURRENCY_RATE"
                       usesDispositions="true"
                       version="4">
                       <properties>
@@ -103,7 +103,7 @@
                         <property
                           dataType="System.String"
                           description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowset">[dbo].[A_FX_EXCHANGE_L_CURRENCY]</property>
+                          name="OpenRowset">[dbo].[B_FX_EXCHANGE_F_CURRENCY_RATE]</property>
                         <property
                           dataType="System.String"
                           description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
@@ -145,7 +145,7 @@
                       </properties>
                       <connections>
                         <connection
-                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Connections[OleDbConnection]"
+                          refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Connections[OleDbConnection]"
                           connectionManagerID="Package.ConnectionManagers[localhost.DM_FX_EXCHANGE.fxUserDWH]"
                           connectionManagerRefId="Package.ConnectionManagers[localhost.DM_FX_EXCHANGE.fxUserDWH]"
                           description="Connessione di run-time OLE DB utilizzata per accedere al database."
@@ -153,74 +153,76 @@
                       </connections>
                       <inputs>
                         <input
-                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB]"
+                          refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB]"
                           errorOrTruncationOperation="Inserimento"
                           errorRowDisposition="FailComponent"
                           hasSideEffects="true"
                           name="Input destinazione OLE DB">
                           <inputColumns>
                             <inputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].Columns[CurrencyIds]"
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].Columns[baseCurrencyIds]"
                               cachedDataType="i4"
-                              cachedName="CurrencyIds"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[CurrencyIds]"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[CurrencyIds]" />
+                              cachedName="baseCurrencyIds"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[baseCurrencyIds]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[baseCurrencyIds]" />
                             <inputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].Columns[Name]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="3"
-                              cachedName="Name"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[Name]"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Name]" />
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].Columns[quoteCurrencyIds]"
+                              cachedDataType="i4"
+                              cachedName="quoteCurrencyIds"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[quoteCurrencyIds]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[quoteCurrencyIds]" />
                             <inputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].Columns[Description]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="23"
-                              cachedName="Description"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[Description]"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Description]" />
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].Columns[currentRate]"
+                              cachedDataType="r8"
+                              cachedName="currentRate"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[currentRate]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[currentRate]" />
+                            <inputColumn
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].Columns[yesterdayNYTimeChange]"
+                              cachedDataType="r8"
+                              cachedName="yesterdayNYTimeChange"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[yesterdayNYTimeChange]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[yesterdayNYTimeChange]" />
                           </inputColumns>
                           <externalMetadataColumns
                             isUsed="True">
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[CurrencyIds]"
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[baseCurrencyIds]"
                               dataType="i4"
-                              name="CurrencyIds" />
+                              name="baseCurrencyIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[Name]"
-                              codePage="1252"
-                              dataType="str"
-                              length="3"
-                              name="Name" />
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[quoteCurrencyIds]"
+                              dataType="i4"
+                              name="quoteCurrencyIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[Description]"
-                              codePage="1252"
-                              dataType="str"
-                              length="23"
-                              name="Description" />
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[currentRate]"
+                              dataType="r8"
+                              name="currentRate" />
+                            <externalMetadataColumn
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[yesterdayNYTimeChange]"
+                              dataType="r8"
+                              name="yesterdayNYTimeChange" />
                           </externalMetadataColumns>
                         </input>
                       </inputs>
                       <outputs>
                         <output
-                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Outputs[Output errori destinazione OLE DB]"
+                          refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Outputs[Output errori destinazione OLE DB]"
                           exclusionGroup="1"
                           isErrorOut="true"
                           name="Output errori destinazione OLE DB"
-                          synchronousInputId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB]">
+                          synchronousInputId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB]">
                           <outputColumns>
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
                               name="ErrorCode"
                               specialFlags="1" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
                               name="ErrorColumn"
                               specialFlags="2" />
                           </outputColumns>
@@ -229,11 +231,11 @@
                       </outputs>
                     </component>
                     <component
-                      refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY"
+                      refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE"
                       componentClassID="Microsoft.OLEDBSource"
                       contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
                       description="Origine OLE DB"
-                      name="S_CURRENCY"
+                      name="SF_CURRENCY_RATE"
                       usesDispositions="true"
                       version="7">
                       <properties>
@@ -244,7 +246,7 @@
                         <property
                           dataType="System.String"
                           description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowset">[dbo].[A_FX_EXCHANGE_S_CURRENCY]</property>
+                          name="OpenRowset">[dbo].[B_FX_EXCHANGE_SF_CURRENCY_RATE]</property>
                         <property
                           dataType="System.String"
                           description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
@@ -278,7 +280,7 @@
                       </properties>
                       <connections>
                         <connection
-                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Connections[OleDbConnection]"
+                          refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Connections[OleDbConnection]"
                           connectionManagerID="Package.ConnectionManagers[localhost.SA_FX_EXCHANGE.fxUserDWH]"
                           connectionManagerRefId="Package.ConnectionManagers[localhost.SA_FX_EXCHANGE.fxUserDWH]"
                           description="Connessione di run-time OLE DB utilizzata per accedere al database."
@@ -286,95 +288,101 @@
                       </connections>
                       <outputs>
                         <output
-                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB]"
+                          refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB]"
                           name="Output origine OLE DB">
                           <outputColumns>
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[CurrencyIds]"
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[baseCurrencyIds]"
                               dataType="i4"
                               errorOrTruncationOperation="Conversione"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[CurrencyIds]"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[CurrencyIds]"
-                              name="CurrencyIds"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].ExternalColumns[baseCurrencyIds]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[baseCurrencyIds]"
+                              name="baseCurrencyIds"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Name]"
-                              codePage="1252"
-                              dataType="str"
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[quoteCurrencyIds]"
+                              dataType="i4"
                               errorOrTruncationOperation="Conversione"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[Name]"
-                              length="3"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Name]"
-                              name="Name"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].ExternalColumns[quoteCurrencyIds]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[quoteCurrencyIds]"
+                              name="quoteCurrencyIds"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Description]"
-                              codePage="1252"
-                              dataType="str"
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[currentRate]"
+                              dataType="r8"
                               errorOrTruncationOperation="Conversione"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[Description]"
-                              length="23"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Description]"
-                              name="Description"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].ExternalColumns[currentRate]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[currentRate]"
+                              name="currentRate"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[yesterdayNYTimeChange]"
+                              dataType="r8"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].ExternalColumns[yesterdayNYTimeChange]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].Columns[yesterdayNYTimeChange]"
+                              name="yesterdayNYTimeChange"
                               truncationRowDisposition="FailComponent" />
                           </outputColumns>
                           <externalMetadataColumns
                             isUsed="True">
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[CurrencyIds]"
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].ExternalColumns[baseCurrencyIds]"
                               dataType="i4"
-                              name="CurrencyIds" />
+                              name="baseCurrencyIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[Name]"
-                              codePage="1252"
-                              dataType="str"
-                              length="3"
-                              name="Name" />
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].ExternalColumns[quoteCurrencyIds]"
+                              dataType="i4"
+                              name="quoteCurrencyIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[Description]"
-                              codePage="1252"
-                              dataType="str"
-                              length="23"
-                              name="Description" />
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].ExternalColumns[currentRate]"
+                              dataType="r8"
+                              name="currentRate" />
+                            <externalMetadataColumn
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB].ExternalColumns[yesterdayNYTimeChange]"
+                              dataType="r8"
+                              name="yesterdayNYTimeChange" />
                           </externalMetadataColumns>
                         </output>
                         <output
-                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB]"
+                          refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB]"
                           isErrorOut="true"
                           name="Output errori origine OLE DB">
                           <outputColumns>
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[CurrencyIds]"
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[baseCurrencyIds]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[CurrencyIds]"
-                              name="CurrencyIds" />
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[baseCurrencyIds]"
+                              name="baseCurrencyIds" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[Name]"
-                              codePage="1252"
-                              dataType="str"
-                              length="3"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[Name]"
-                              name="Name" />
-                            <outputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[Description]"
-                              codePage="1252"
-                              dataType="str"
-                              length="23"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[Description]"
-                              name="Description" />
-                            <outputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[quoteCurrencyIds]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[quoteCurrencyIds]"
+                              name="quoteCurrencyIds" />
+                            <outputColumn
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[currentRate]"
+                              dataType="r8"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[currentRate]"
+                              name="currentRate" />
+                            <outputColumn
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[yesterdayNYTimeChange]"
+                              dataType="r8"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[yesterdayNYTimeChange]"
+                              name="yesterdayNYTimeChange" />
+                            <outputColumn
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
                               name="ErrorCode"
                               specialFlags="1" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                              refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                              lineageId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
                               name="ErrorColumn"
                               specialFlags="2" />
                           </outputColumns>
@@ -385,19 +393,19 @@
                   </components>
                   <paths>
                     <path
-                      refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY.Paths[Output origine OLE DB]"
-                      endId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB]"
+                      refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE.Paths[Output origine OLE DB]"
+                      endId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE.Inputs[Input destinazione OLE DB]"
                       name="Output origine OLE DB"
-                      startId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB]" />
+                      startId="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE.Outputs[Output origine OLE DB]" />
                   </paths>
                 </pipeline>
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
-              DTS:refId="Package\Creation of Dimensions in DM\CURRENCY\TRUNCATE"
+              DTS:refId="Package\Contenitore Sequenza\F_CURRENCY_RATE\TRUNCATE"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Attività Esegui SQL"
-              DTS:DTSID="{4d9316dc-b6cb-4ec0-9271-69c8a00e6468}"
+              DTS:DTSID="{5342acaf-70b6-4e2c-aae1-305c6be5193c}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="TRUNCATE"
@@ -407,39 +415,39 @@
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
                   SQLTask:Connection="{12EF7BB9-D53D-4C15-84C1-59FF0798E5FB}"
-                  SQLTask:SqlStatementSource="IF OBJECT_ID('A_FX_EXCHANGE_L_CURRENCY') IS NOT NULL&#xA;TRUNCATE TABLE A_FX_EXCHANGE_L_CURRENCY" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+                  SQLTask:SqlStatementSource="IF OBJECT_ID('B_FX_EXCHANGE_F_SAMPLE_RATE') IS NOT NULL&#xA;TRUNCATE TABLE B_FX_EXCHANGE_F_SAMPLE_RATE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
               </DTS:ObjectData>
             </DTS:Executable>
           </DTS:Executables>
           <DTS:PrecedenceConstraints>
             <DTS:PrecedenceConstraint
-              DTS:refId="Package\Creation of Dimensions in DM\CURRENCY.PrecedenceConstraints[Vincolo]"
+              DTS:refId="Package\Contenitore Sequenza\F_CURRENCY_RATE.PrecedenceConstraints[Vincolo]"
               DTS:CreationName=""
-              DTS:DTSID="{E04E87E7-115A-47BA-9A80-521D76D25A19}"
-              DTS:From="Package\Creation of Dimensions in DM\CURRENCY\TRUNCATE"
+              DTS:DTSID="{9cc8f45b-b882-4567-ad0c-d146e70eb468}"
+              DTS:From="Package\Contenitore Sequenza\F_CURRENCY_RATE\TRUNCATE"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Vincolo"
-              DTS:To="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY" />
+              DTS:To="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE" />
           </DTS:PrecedenceConstraints>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Creation of Dimensions in DM\DATETIME"
+          DTS:refId="Package\Contenitore Sequenza\F_SAMPLE_RATE"
           DTS:CreationName="STOCK:SEQUENCE"
           DTS:Description="Contenitore Sequenza"
-          DTS:DTSID="{d696c181-9fa9-4cdd-9311-2f5cabe8f573}"
+          DTS:DTSID="{ec6be036-f2f6-4344-8ab8-0522f457b229}"
           DTS:ExecutableType="STOCK:SEQUENCE"
           DTS:LocaleID="-1"
-          DTS:ObjectName="DATETIME">
+          DTS:ObjectName="F_SAMPLE_RATE">
           <DTS:Variables />
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME"
+              DTS:refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE"
               DTS:CreationName="Microsoft.Pipeline"
               DTS:Description="Attività Flusso di dati"
-              DTS:DTSID="{47173a77-79d3-4b07-9979-926c73f48141}"
+              DTS:DTSID="{620cb87d-76de-4044-8460-7e7c421d904a}"
               DTS:ExecutableType="Microsoft.Pipeline"
               DTS:LocaleID="-1"
-              DTS:ObjectName="L_DATETIME"
+              DTS:ObjectName="F_SAMPLE_RATE"
               DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
               <DTS:ObjectData>
@@ -447,11 +455,11 @@
                   version="1">
                   <components>
                     <component
-                      refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME"
+                      refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE"
                       componentClassID="Microsoft.OLEDBDestination"
                       contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
                       description="Destinazione OLE DB"
-                      name="L_DATETIME"
+                      name="F_SAMPLE_RATE"
                       usesDispositions="true"
                       version="4">
                       <properties>
@@ -462,7 +470,7 @@
                         <property
                           dataType="System.String"
                           description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowset">[dbo].[A_FX_EXCHANGE_L_DATETIME]</property>
+                          name="OpenRowset">[dbo].[B_FX_EXCHANGE_F_SAMPLE_RATE]</property>
                         <property
                           dataType="System.String"
                           description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
@@ -504,7 +512,7 @@
                       </properties>
                       <connections>
                         <connection
-                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Connections[OleDbConnection]"
+                          refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Connections[OleDbConnection]"
                           connectionManagerID="Package.ConnectionManagers[localhost.DM_FX_EXCHANGE.fxUserDWH]"
                           connectionManagerRefId="Package.ConnectionManagers[localhost.DM_FX_EXCHANGE.fxUserDWH]"
                           description="Connessione di run-time OLE DB utilizzata per accedere al database."
@@ -512,126 +520,96 @@
                       </connections>
                       <inputs>
                         <input
-                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB]"
+                          refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB]"
                           errorOrTruncationOperation="Inserimento"
                           errorRowDisposition="FailComponent"
                           hasSideEffects="true"
                           name="Input destinazione OLE DB">
                           <inputColumns>
                             <inputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[DatetimeIds]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].Columns[eventIds]"
                               cachedDataType="i4"
-                              cachedName="DatetimeIds"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[DatetimeIds]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[DatetimeIds]" />
+                              cachedName="eventIds"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[eventIds]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[eventIds]" />
                             <inputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[eventTime]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].Columns[eventId]"
                               cachedDataType="i8"
-                              cachedName="eventTime"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[eventTime]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[eventTime]" />
+                              cachedName="eventId"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[eventId]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[eventId]" />
                             <inputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Datetime]"
-                              cachedDataType="dbTimeStamp"
-                              cachedName="Datetime"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Datetime]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Datetime]" />
-                            <inputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Date]"
-                              cachedDataType="dbDate"
-                              cachedName="Date"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Date]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Date]" />
-                            <inputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Year]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].Columns[eventTimeIds]"
                               cachedDataType="i4"
-                              cachedName="Year"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Year]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Year]" />
+                              cachedName="eventTimeIds"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[eventTimeIds]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[eventTimeIds]" />
                             <inputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Month]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].Columns[baseCurrencyIds]"
                               cachedDataType="i4"
-                              cachedName="Month"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Month]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Month]" />
+                              cachedName="baseCurrencyIds"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[baseCurrencyIds]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[baseCurrencyIds]" />
                             <inputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Day]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].Columns[quoteCurrencyIds]"
                               cachedDataType="i4"
-                              cachedName="Day"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Day]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Day]" />
+                              cachedName="quoteCurrencyIds"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[quoteCurrencyIds]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[quoteCurrencyIds]" />
                             <inputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Semester]"
-                              cachedDataType="i4"
-                              cachedName="Semester"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Semester]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Semester]" />
-                            <inputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Quarter]"
-                              cachedDataType="i4"
-                              cachedName="Quarter"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Quarter]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Quarter]" />
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].Columns[rate]"
+                              cachedDataType="r8"
+                              cachedName="rate"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[rate]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[rate]" />
                           </inputColumns>
                           <externalMetadataColumns
                             isUsed="True">
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[DatetimeIds]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[eventIds]"
                               dataType="i4"
-                              name="DatetimeIds" />
+                              name="eventIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[eventTime]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[eventId]"
                               dataType="i8"
-                              name="eventTime" />
+                              name="eventId" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Datetime]"
-                              dataType="dbTimeStamp"
-                              name="Datetime" />
-                            <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Date]"
-                              dataType="dbDate"
-                              name="Date" />
-                            <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Year]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[eventTimeIds]"
                               dataType="i4"
-                              name="Year" />
+                              name="eventTimeIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Month]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[baseCurrencyIds]"
                               dataType="i4"
-                              name="Month" />
+                              name="baseCurrencyIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Day]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[quoteCurrencyIds]"
                               dataType="i4"
-                              name="Day" />
+                              name="quoteCurrencyIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Semester]"
-                              dataType="i4"
-                              name="Semester" />
-                            <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Quarter]"
-                              dataType="i4"
-                              name="Quarter" />
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB].ExternalColumns[rate]"
+                              dataType="r8"
+                              name="rate" />
                           </externalMetadataColumns>
                         </input>
                       </inputs>
                       <outputs>
                         <output
-                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Outputs[Output errori destinazione OLE DB]"
+                          refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Outputs[Output errori destinazione OLE DB]"
                           exclusionGroup="1"
                           isErrorOut="true"
                           name="Output errori destinazione OLE DB"
-                          synchronousInputId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB]">
+                          synchronousInputId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB]">
                           <outputColumns>
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
                               name="ErrorCode"
                               specialFlags="1" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
                               name="ErrorColumn"
                               specialFlags="2" />
                           </outputColumns>
@@ -640,11 +618,11 @@
                       </outputs>
                     </component>
                     <component
-                      refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME"
+                      refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE"
                       componentClassID="Microsoft.OLEDBSource"
                       contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
                       description="Origine OLE DB"
-                      name="S_DATETIME"
+                      name="SF_SAMPLE_RATE"
                       usesDispositions="true"
                       version="7">
                       <properties>
@@ -655,7 +633,7 @@
                         <property
                           dataType="System.String"
                           description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowset">[dbo].[A_FX_EXCHANGE_S_DATETIME]</property>
+                          name="OpenRowset">[dbo].[B_FX_EXCHANGE_SF_SAMPLE_RATE]</property>
                         <property
                           dataType="System.String"
                           description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
@@ -689,7 +667,7 @@
                       </properties>
                       <connections>
                         <connection
-                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Connections[OleDbConnection]"
+                          refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Connections[OleDbConnection]"
                           connectionManagerID="Package.ConnectionManagers[localhost.SA_FX_EXCHANGE.fxUserDWH]"
                           connectionManagerRefId="Package.ConnectionManagers[localhost.SA_FX_EXCHANGE.fxUserDWH]"
                           description="Connessione di run-time OLE DB utilizzata per accedere al database."
@@ -697,191 +675,137 @@
                       </connections>
                       <outputs>
                         <output
-                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB]"
+                          refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB]"
                           name="Output origine OLE DB">
                           <outputColumns>
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[DatetimeIds]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[eventIds]"
                               dataType="i4"
                               errorOrTruncationOperation="Conversione"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[DatetimeIds]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[DatetimeIds]"
-                              name="DatetimeIds"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[eventIds]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[eventIds]"
+                              name="eventIds"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[eventTime]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[eventId]"
                               dataType="i8"
                               errorOrTruncationOperation="Conversione"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[eventTime]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[eventTime]"
-                              name="eventTime"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[eventId]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[eventId]"
+                              name="eventId"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Datetime]"
-                              dataType="dbTimeStamp"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Datetime]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Datetime]"
-                              name="Datetime"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Date]"
-                              dataType="dbDate"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Date]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Date]"
-                              name="Date"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Year]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[eventTimeIds]"
                               dataType="i4"
                               errorOrTruncationOperation="Conversione"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Year]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Year]"
-                              name="Year"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[eventTimeIds]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[eventTimeIds]"
+                              name="eventTimeIds"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Month]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[baseCurrencyIds]"
                               dataType="i4"
                               errorOrTruncationOperation="Conversione"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Month]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Month]"
-                              name="Month"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[baseCurrencyIds]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[baseCurrencyIds]"
+                              name="baseCurrencyIds"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Day]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[quoteCurrencyIds]"
                               dataType="i4"
                               errorOrTruncationOperation="Conversione"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Day]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Day]"
-                              name="Day"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[quoteCurrencyIds]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[quoteCurrencyIds]"
+                              name="quoteCurrencyIds"
                               truncationRowDisposition="FailComponent" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Semester]"
-                              dataType="i4"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[rate]"
+                              dataType="r8"
                               errorOrTruncationOperation="Conversione"
                               errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Semester]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Semester]"
-                              name="Semester"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Quarter]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Quarter]"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Quarter]"
-                              name="Quarter"
+                              externalMetadataColumnId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[rate]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].Columns[rate]"
+                              name="rate"
                               truncationRowDisposition="FailComponent" />
                           </outputColumns>
                           <externalMetadataColumns
                             isUsed="True">
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[DatetimeIds]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[eventIds]"
                               dataType="i4"
-                              name="DatetimeIds" />
+                              name="eventIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[eventTime]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[eventId]"
                               dataType="i8"
-                              name="eventTime" />
+                              name="eventId" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Datetime]"
-                              dataType="dbTimeStamp"
-                              name="Datetime" />
-                            <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Date]"
-                              dataType="dbDate"
-                              name="Date" />
-                            <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Year]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[eventTimeIds]"
                               dataType="i4"
-                              name="Year" />
+                              name="eventTimeIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Month]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[baseCurrencyIds]"
                               dataType="i4"
-                              name="Month" />
+                              name="baseCurrencyIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Day]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[quoteCurrencyIds]"
                               dataType="i4"
-                              name="Day" />
+                              name="quoteCurrencyIds" />
                             <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Semester]"
-                              dataType="i4"
-                              name="Semester" />
-                            <externalMetadataColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Quarter]"
-                              dataType="i4"
-                              name="Quarter" />
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB].ExternalColumns[rate]"
+                              dataType="r8"
+                              name="rate" />
                           </externalMetadataColumns>
                         </output>
                         <output
-                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB]"
+                          refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB]"
                           isErrorOut="true"
                           name="Output errori origine OLE DB">
                           <outputColumns>
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[DatetimeIds]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[eventIds]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[DatetimeIds]"
-                              name="DatetimeIds" />
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[eventIds]"
+                              name="eventIds" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[eventTime]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[eventId]"
                               dataType="i8"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[eventTime]"
-                              name="eventTime" />
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[eventId]"
+                              name="eventId" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Datetime]"
-                              dataType="dbTimeStamp"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Datetime]"
-                              name="Datetime" />
-                            <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Date]"
-                              dataType="dbDate"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Date]"
-                              name="Date" />
-                            <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Year]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[eventTimeIds]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Year]"
-                              name="Year" />
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[eventTimeIds]"
+                              name="eventTimeIds" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Month]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[baseCurrencyIds]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Month]"
-                              name="Month" />
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[baseCurrencyIds]"
+                              name="baseCurrencyIds" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Day]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[quoteCurrencyIds]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Day]"
-                              name="Day" />
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[quoteCurrencyIds]"
+                              name="quoteCurrencyIds" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Semester]"
-                              dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Semester]"
-                              name="Semester" />
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[rate]"
+                              dataType="r8"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[rate]"
+                              name="rate" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Quarter]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Quarter]"
-                              name="Quarter" />
-                            <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
                               name="ErrorCode"
                               specialFlags="1" />
                             <outputColumn
-                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                              refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
                               dataType="i4"
-                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                              lineageId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
                               name="ErrorColumn"
                               specialFlags="2" />
                           </outputColumns>
@@ -892,19 +816,19 @@
                   </components>
                   <paths>
                     <path
-                      refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME.Paths[Output origine OLE DB]"
-                      endId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB]"
+                      refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE.Paths[Output origine OLE DB]"
+                      endId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE.Inputs[Input destinazione OLE DB]"
                       name="Output origine OLE DB"
-                      startId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB]" />
+                      startId="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE.Outputs[Output origine OLE DB]" />
                   </paths>
                 </pipeline>
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
-              DTS:refId="Package\Creation of Dimensions in DM\DATETIME\TRUNCATE"
+              DTS:refId="Package\Contenitore Sequenza\F_SAMPLE_RATE\TRUNCATE"
               DTS:CreationName="Microsoft.ExecuteSQLTask"
               DTS:Description="Attività Esegui SQL"
-              DTS:DTSID="{c9cbfd77-88c3-42b5-807d-eeebfae6c555}"
+              DTS:DTSID="{24ba1663-2a89-4727-b45e-7c1b8628e0b5}"
               DTS:ExecutableType="Microsoft.ExecuteSQLTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="TRUNCATE"
@@ -914,31 +838,31 @@
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
                   SQLTask:Connection="{12EF7BB9-D53D-4C15-84C1-59FF0798E5FB}"
-                  SQLTask:SqlStatementSource="IF OBJECT_ID('A_FX_EXCHANGE_L_DATETIME') IS NOT NULL&#xA;TRUNCATE TABLE A_FX_EXCHANGE_L_DATETIME" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+                  SQLTask:SqlStatementSource="IF OBJECT_ID('B_FX_EXCHANGE_F_SAMPLE_RATE') IS NOT NULL&#xA;TRUNCATE TABLE B_FX_EXCHANGE_F_SAMPLE_RATE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
               </DTS:ObjectData>
             </DTS:Executable>
           </DTS:Executables>
           <DTS:PrecedenceConstraints>
             <DTS:PrecedenceConstraint
-              DTS:refId="Package\Creation of Dimensions in DM\DATETIME.PrecedenceConstraints[Vincolo]"
+              DTS:refId="Package\Contenitore Sequenza\F_SAMPLE_RATE.PrecedenceConstraints[Vincolo]"
               DTS:CreationName=""
-              DTS:DTSID="{db432e01-c87c-4f36-bdde-3a7da50a7d5d}"
-              DTS:From="Package\Creation of Dimensions in DM\DATETIME\TRUNCATE"
+              DTS:DTSID="{69b6bee0-6dc9-473b-80c3-3b05c0afdd71}"
+              DTS:From="Package\Contenitore Sequenza\F_SAMPLE_RATE\TRUNCATE"
               DTS:LogicalAnd="True"
               DTS:ObjectName="Vincolo"
-              DTS:To="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME" />
+              DTS:To="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE" />
           </DTS:PrecedenceConstraints>
         </DTS:Executable>
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Creation of Dimensions in DM.PrecedenceConstraints[Vincolo]"
+          DTS:refId="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo]"
           DTS:CreationName=""
-          DTS:DTSID="{DED78E90-6E46-478E-AF50-E7E02594B396}"
-          DTS:From="Package\Creation of Dimensions in DM\CURRENCY"
+          DTS:DTSID="{F90A30A5-0EA1-4A97-8393-A68E30D8E2F8}"
+          DTS:From="Package\Contenitore Sequenza\F_SAMPLE_RATE"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Vincolo"
-          DTS:To="Package\Creation of Dimensions in DM\DATETIME" />
+          DTS:To="Package\Contenitore Sequenza\F_CURRENCY_RATE" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
@@ -955,22 +879,22 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="154,42"
-          Id="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY"
+          Size="172,42"
+          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE"
           TopLeft="100,132" />
         <NodeLayout
           Size="139,42"
-          Id="Package\Creation of Dimensions in DM\CURRENCY\TRUNCATE"
+          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE\TRUNCATE"
           TopLeft="35,25" />
         <EdgeLayout
-          Id="Package\Creation of Dimensions in DM\CURRENCY.PrecedenceConstraints[Vincolo]"
+          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE.PrecedenceConstraints[Vincolo]"
           TopLeft="104.5,67">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72.5,65"
+              EndConnector="81.5,65"
               Start="0,0"
-              End="72.5,57.5">
+              End="81.5,57.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -981,13 +905,62 @@
                     Point2="0,32.5"
                     Point3="4,32.5" />
                   <mssgle:LineSegment
-                    End="68.5,32.5" />
+                    End="77.5,32.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="68.5,32.5"
-                    Point2="72.5,32.5"
-                    Point3="72.5,36.5" />
+                    Point1="77.5,32.5"
+                    Point2="81.5,32.5"
+                    Point3="81.5,36.5" />
                   <mssgle:LineSegment
-                    End="72.5,57.5" />
+                    End="81.5,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="320,224"
+          Size="320,267"
+          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE"
+          TopLeft="46,64" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE"
+          TopLeft="100,132" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\TRUNCATE"
+          TopLeft="35,25" />
+        <EdgeLayout
+          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE.PrecedenceConstraints[Vincolo]"
+          TopLeft="104.5,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90.5,65"
+              Start="0,0"
+              End="90.5,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="4,32.5" />
+                  <mssgle:LineSegment
+                    End="86.5,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="86.5,32.5"
+                    Point2="90.5,32.5"
+                    Point3="90.5,36.5" />
+                  <mssgle:LineSegment
+                    End="90.5,57.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1001,42 +974,34 @@
           IsExpanded="True"
           PanelSize="305,233"
           Size="305,276"
-          Id="Package\Creation of Dimensions in DM\CURRENCY"
-          TopLeft="77,55" />
-        <NodeLayout
-          Size="147,42"
-          Id="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME"
-          TopLeft="100,132" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Creation of Dimensions in DM\DATETIME\TRUNCATE"
-          TopLeft="35,25" />
+          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE"
+          TopLeft="226,437" />
         <EdgeLayout
-          Id="Package\Creation of Dimensions in DM\DATETIME.PrecedenceConstraints[Vincolo]"
-          TopLeft="104.5,67">
+          Id="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo]"
+          TopLeft="206,331">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="69,65"
+              EndConnector="172.5,106"
               Start="0,0"
-              End="69,57.5">
+              End="172.5,98.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5" />
+                    End="0,49" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.5"
-                    Point2="0,32.5"
-                    Point3="4,32.5" />
+                    Point1="0,49"
+                    Point2="0,53"
+                    Point3="4,53" />
                   <mssgle:LineSegment
-                    End="65,32.5" />
+                    End="168.5,53" />
                   <mssgle:CubicBezierSegment
-                    Point1="65,32.5"
-                    Point2="69,32.5"
-                    Point3="69,36.5" />
+                    Point1="168.5,53"
+                    Point2="172.5,53"
+                    Point3="172.5,57" />
                   <mssgle:LineSegment
-                    End="69,57.5" />
+                    End="172.5,98.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1048,76 +1013,35 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="305,264"
-          Size="305,307"
-          Id="Package\Creation of Dimensions in DM\DATETIME"
-          TopLeft="483,184" />
-        <EdgeLayout
-          Id="Package\Creation of Dimensions in DM.PrecedenceConstraints[Vincolo]"
-          TopLeft="382,193">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="101,144.5"
-              Start="0,0"
-              End="93.5,144.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="46.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46.5,0"
-                    Point2="50.5,0"
-                    Point3="50.5,4" />
-                  <mssgle:LineSegment
-                    End="50.5,140.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="50.5,140.5"
-                    Point2="50.5,144.5"
-                    Point3="54.5,144.5" />
-                  <mssgle:LineSegment
-                    End="93.5,144.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="840,565"
-          Size="840,608"
-          Id="Package\Creation of Dimensions in DM"
-          TopLeft="144,83" />
+          PanelSize="568,768"
+          Size="568,811"
+          Id="Package\Contenitore Sequenza"
+          TopLeft="138,182" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY">
+    design-time-name="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY"
-          TopLeft="136,78" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY"
+          Size="172,42"
+          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE"
           TopLeft="231,192" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE"
+          TopLeft="136,78" />
         <EdgeLayout
-          Id="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY.Paths[Output origine OLE DB]"
-          TopLeft="213.5,120">
+          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE.Paths[Output origine OLE DB]"
+          TopLeft="225.5,120">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="94.5,72"
+              EndConnector="91.5,72"
               Start="0,0"
-              End="94.5,64.5">
+              End="91.5,64.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1128,13 +1052,13 @@
                     Point2="0,36"
                     Point3="4,36" />
                   <mssgle:LineSegment
-                    End="90.5,36" />
+                    End="87.5,36" />
                   <mssgle:CubicBezierSegment
-                    Point1="90.5,36"
-                    Point2="94.5,36"
-                    Point3="94.5,40" />
+                    Point1="87.5,36"
+                    Point2="91.5,36"
+                    Point3="91.5,40" />
                   <mssgle:LineSegment
-                    End="94.5,64.5" />
+                    End="91.5,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1147,7 +1071,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY">
+    design-time-name="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\F_SAMPLE_RATE">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1160,7 +1084,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY">
+    design-time-name="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1173,27 +1097,27 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME">
+    design-time-name="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="147,42"
-          Id="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME"
+          Size="190,42"
+          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE"
           TopLeft="231,192" />
         <NodeLayout
-          Size="148,42"
-          Id="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME"
+          Size="197,42"
+          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE"
           TopLeft="136,78" />
         <EdgeLayout
-          Id="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME.Paths[Output origine OLE DB]"
-          TopLeft="210,120">
+          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE.Paths[Output origine OLE DB]"
+          TopLeft="234.5,120">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="94.5,72"
+              EndConnector="91.5,72"
               Start="0,0"
-              End="94.5,64.5">
+              End="91.5,64.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1204,13 +1128,13 @@
                     Point2="0,36"
                     Point3="4,36" />
                   <mssgle:LineSegment
-                    End="90.5,36" />
+                    End="87.5,36" />
                   <mssgle:CubicBezierSegment
-                    Point1="90.5,36"
-                    Point2="94.5,36"
-                    Point3="94.5,40" />
+                    Point1="87.5,36"
+                    Point2="91.5,36"
+                    Point3="91.5,40" />
                   <mssgle:LineSegment
-                    End="94.5,64.5" />
+                    End="91.5,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1223,7 +1147,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME">
+    design-time-name="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1236,7 +1160,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME">
+    design-time-name="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
