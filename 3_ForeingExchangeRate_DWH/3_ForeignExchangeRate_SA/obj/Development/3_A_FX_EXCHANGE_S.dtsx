@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA0Z5aajNX+aa8p5jBAcfqn7bmzzNhYsOKOfWbf7f3WzAAAAAAOgAAAAAIAACAAAADMLwaF4/KkoijwrO7YQKSMozoc083lU0rQGWxcKTMh0iAAAADTCut4+x4VNo8ou5R5V1OsQSXlrrINWN8Zzj6VMWvQpEAAAADu2ZW1i2kR5cUO2GxneDaj9kZs3YjF2s/ay1AHA4z+0vijE4aC7pXH6P38kYKKV3AP4iv2rdSHyBckCazkrzjx</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABdlGhdZXWYcJrxnpuQgb3cpRfyhMllBPeRnvaZXVvxcwAAAAAOgAAAAAIAACAAAABBT3hNaW5F+tG7txYSZsTUCI3QaQtdOEj8AZMqyu9NJSAAAADpglffwaUTfhJ4huV6JPYt9Cgw5Tv1wRSluhHq2hcXSEAAAAC+YHwtLy6zX6ELmvro+7ZHRkmlncXszcpt7Lt54oFT489b3bJ6L+pnZYwQsZwzglGwy/dO7GOS28Cgj2eLe0S9</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>

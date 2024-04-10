@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="4_B_FX_EXCHANGE_F"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{103042E6-25DC-4C6C-BE12-EE00CCF76621}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{0F76DE07-0B25-4BE7-AAE6-6679D8F2F193}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACfZPaR9XqBH2LSyYB28/S4dB8d02b/sZv/LX6ZKur6mgAAAAAOgAAAAAIAACAAAADC2S/64NvHlNvHTrxYGgtbIDc3yFul1kJWYKqd+YcJaiAAAABwSZo5VVorQyaV54uh6f2XSArqfwYQRuLWMQ25Rqf7CEAAAADSPv+Qugnrwq9DG0dMNXMpFtioLWlJU7SwmZfYv/l2kl+1xjRjmRcNIw5h1e9HiLVkLMN2Al24qQ17TsBnq4Fj</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADRt8fVaTlhIeUXuBskdINZGqqFPyhTynhsKq78e8ruqQAAAAAOgAAAAAIAACAAAAAhi8pkaF8x68lr+tHyPeJ4HXtWO9WzjBENwtd/6t+/FCAAAADx5X7nhTNVJr5r7+91n3Ztw2YSghwsMYj2GQFxRdCEP0AAAABq0a/ZK2eAogbjDSy6OYJBjCOuvKAnqhlOOGk7tag7diZS6IahDYllKCCUAx2ZWkbaYC/13IZ4A+zDY7+0Am7b</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC8ZRBhpAawMa1aRNaE8lbiW4eEtRlmdHrCg3DB2U8XLQAAAAAOgAAAAAIAACAAAACLl32pZAxu4PJyu1+PNxYEewKGcIn4cSg32ffys2OcGSAAAAAgoiHsqzMZAVCV3EhalUkqHFkc1JfS2hLpRpxcpydWuUAAAACrVdE1jqs1IharinWhSzAE2rzD59fx7LcliYnp+RBCgyO6geD8Z+UQWfbHi0xgzism4MUmwfM0GrCgAGkcnNYO</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACNpkJmJKoYD+SPIrdZj7icJVIsyPQO5KWPwV209eRXMAAAAAAOgAAAAAIAACAAAAB9pbTdaH9tZGZgO6pW30vnqOh2jkYLt1fZoZ9tJwxLMSAAAACX3A5Z6iqKHR4IK4MCvpOypSLxLKH7UbLxVSY1rpY4MUAAAADeCtiLqX/f96xv77Ff7dhOaMWOVFgN+8EXKjBksfMl4frdpaqkdklZsk4fHG2m117VAIHr7N89GlHPCeyLbvGB</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -415,7 +415,7 @@
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
                   SQLTask:Connection="{12EF7BB9-D53D-4C15-84C1-59FF0798E5FB}"
-                  SQLTask:SqlStatementSource="IF OBJECT_ID('B_FX_EXCHANGE_F_SAMPLE_RATE') IS NOT NULL&#xA;TRUNCATE TABLE B_FX_EXCHANGE_F_SAMPLE_RATE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+                  SQLTask:SqlStatementSource="IF OBJECT_ID('B_FX_EXCHANGE_F_CURRENCY_RATE') IS NOT NULL&#xA;TRUNCATE TABLE B_FX_EXCHANGE_F_CURRENCY_RATE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
               </DTS:ObjectData>
             </DTS:Executable>
           </DTS:Executables>
@@ -879,55 +879,6 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42"
-          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE"
-          TopLeft="100,132" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE\TRUNCATE"
-          TopLeft="35,25" />
-        <EdgeLayout
-          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE.PrecedenceConstraints[Vincolo]"
-          TopLeft="104.5,67">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="81.5,65"
-              Start="0,0"
-              End="81.5,57.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.5"
-                    Point2="0,32.5"
-                    Point3="4,32.5" />
-                  <mssgle:LineSegment
-                    End="77.5,32.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="77.5,32.5"
-                    Point2="81.5,32.5"
-                    Point3="81.5,36.5" />
-                  <mssgle:LineSegment
-                    End="81.5,57.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="320,224"
-          Size="320,267"
-          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE"
-          TopLeft="46,64" />
-        <NodeLayout
           Size="190,42"
           Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE"
           TopLeft="100,132" />
@@ -976,6 +927,55 @@
           Size="305,276"
           Id="Package\Contenitore Sequenza\F_CURRENCY_RATE"
           TopLeft="226,437" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE"
+          TopLeft="100,132" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE\TRUNCATE"
+          TopLeft="35,25" />
+        <EdgeLayout
+          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE.PrecedenceConstraints[Vincolo]"
+          TopLeft="104.5,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.5,65"
+              Start="0,0"
+              End="81.5,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="4,32.5" />
+                  <mssgle:LineSegment
+                    End="77.5,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77.5,32.5"
+                    Point2="81.5,32.5"
+                    Point3="81.5,36.5" />
+                  <mssgle:LineSegment
+                    End="81.5,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="320,224"
+          Size="320,267"
+          Id="Package\Contenitore Sequenza\F_SAMPLE_RATE"
+          TopLeft="46,64" />
         <EdgeLayout
           Id="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo]"
           TopLeft="206,331">
@@ -1020,6 +1020,82 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE"
+          TopLeft="136,78" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE"
+          TopLeft="231,192" />
+        <EdgeLayout
+          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE.Paths[Output origine OLE DB]"
+          TopLeft="234.5,120">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="91.5,72"
+              Start="0,0"
+              End="91.5,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="4,36" />
+                  <mssgle:LineSegment
+                    End="87.5,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="87.5,36"
+                    Point2="91.5,36"
+                    Point3="91.5,40" />
+                  <mssgle:LineSegment
+                    End="91.5,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE">
     <LayoutInfo>
@@ -1085,82 +1161,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Contenitore Sequenza\F_SAMPLE_RATE\F_SAMPLE_RATE\SF_SAMPLE_RATE">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="190,42"
-          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE"
-          TopLeft="231,192" />
-        <NodeLayout
-          Size="197,42"
-          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE"
-          TopLeft="136,78" />
-        <EdgeLayout
-          Id="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE.Paths[Output origine OLE DB]"
-          TopLeft="234.5,120">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="91.5,72"
-              Start="0,0"
-              End="91.5,64.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32"
-                    Point2="0,36"
-                    Point3="4,36" />
-                  <mssgle:LineSegment
-                    End="87.5,36" />
-                  <mssgle:CubicBezierSegment
-                    Point1="87.5,36"
-                    Point2="91.5,36"
-                    Point3="91.5,40" />
-                  <mssgle:LineSegment
-                    End="91.5,64.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\F_CURRENCY_RATE">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Contenitore Sequenza\F_CURRENCY_RATE\F_CURRENCY_RATE\SF_CURRENCY_RATE">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
