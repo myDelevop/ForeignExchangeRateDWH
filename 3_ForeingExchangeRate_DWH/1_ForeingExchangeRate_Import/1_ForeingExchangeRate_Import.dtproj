@@ -26,17 +26,35 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-7P0M4LN</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAACAAAAAAAQZgAAAAEAACAAAABV+eG67VMN7MX8G1Uzsf0A+oO9bAm62WhZbuWA34ai2QAAAAAOgAAAAAIAACAAAACyNsppS4LvymgtW7JOWsCMSQAI6slT5KsFXJarNtj9cJAAAABIFQrVExyisQuElqIN4q7l8kf9koelBiAgKu+7SVuctkvH4jg8eiYo714L8wA7pM1GpLavbA3ECwcDbRhjK87aZ841OqAivPm5hiz11A6yqVt7rFvexTEQ7aGLF3x0lwyTUZ6XNnXXuabbINIWHMim1inOQCa3nj5FY7uWu/vuXPGl2tRoiHZqI9f5w+u0RR9AAAAApuE7EZQTc19uUcQQlaiE9oVlEHjWazc6yHm4ZPEdbTZgVPoWk1bw2d5OwLJsOIJuUO/0ZPfLkebvh/IEfl+0XA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAACAAAAAAAQZgAAAAEAACAAAAAnFyMje7vGE5k1D2QV9AtT8j1LR/zACI73RYXe0bnuBQAAAAAOgAAAAAIAACAAAAB8zbO42piCGBcSFRlWoIiNBib4eSIA3GeYMHoaegnTqZAAAADoBQMk8duwu7CAtH4tvJLfOUKK12NJbhOKEzWZwun9UKGBEKdXEOHXEuViaypXvyGGFTDB4iQB8zRi6OCTjBA8+GxWnpU5eSjkyORC1OwYHlEEJtl1BQgvCJajGD2YpOh3YPcutRKvEO20vOaxkj8zOTmS3lAzOdLfhOz+KHUPS5U+RzYit8HRXSHZwPrP5XpAAAAAHRA09sR0hyYFxJ3BLp7j84l0DOHGoRt7EWNemavTjGIRsMshjspl5GHMfVk8CibLc7nx+BBRPd/XOZnmxPn8XA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="1_A_FX_RATES_SAMPLE_T.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="1_Z_ALL_FX_EXCHANGE_Import_TT.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="1_A_FX_RATES_SAMPLE_TT.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters />
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="1_A_FX_RATES_SAMPLE_T.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="1_Z_ALL_FX_EXCHANGE_Import_TT.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{970466F0-56CF-4063-B961-E5BB53F243BC}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">1_Z_ALL_FX_EXCHANGE_Import_TT</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{242A2052-CED4-4F44-A64C-578DA57E07B8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="1_A_FX_RATES_SAMPLE_TT.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{CB939A2D-885D-4A5D-9CC0-064303CDD1BD}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">1_A_FX_RATES_SAMPLE_T</SSIS:Property>
@@ -362,6 +380,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

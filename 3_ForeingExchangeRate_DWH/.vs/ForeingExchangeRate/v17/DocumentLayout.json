@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\cosimo\\OneDrive\\Desktop\\Rocco\\ForeignExchangeRateDWH\\3_ForeingExchangeRate_DWH\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EE1F6E9-F014-49F2-89F9-040BC4A5883F}|4_ForeignExchangeRate_DM\\4_ForeignExchangeRate_DM.dtproj|C:\\Users\\cosimo\\OneDrive\\Desktop\\Rocco\\ForeignExchangeRateDWH\\3_ForeingExchangeRate_DWH\\4_ForeignExchangeRate_DM\\4_B_FX_EXCHANGE_F.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{8EE1F6E9-F014-49F2-89F9-040BC4A5883F}|4_ForeignExchangeRate_DM\\4_ForeignExchangeRate_DM.dtproj|solutionrelative:4_ForeignExchangeRate_DM\\4_B_FX_EXCHANGE_F.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EE1F6E9-F014-49F2-89F9-040BC4A5883F}|4_ForeignExchangeRate_DM\\4_ForeignExchangeRate_DM.dtproj|C:\\Users\\cosimo\\OneDrive\\Desktop\\Rocco\\ForeignExchangeRateDWH\\3_ForeingExchangeRate_DWH\\4_ForeignExchangeRate_DM\\4_A_FX_EXCHANGE_L.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{8EE1F6E9-F014-49F2-89F9-040BC4A5883F}|4_ForeignExchangeRate_DM\\4_ForeignExchangeRate_DM.dtproj|solutionrelative:4_ForeignExchangeRate_DM\\4_A_FX_EXCHANGE_L.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+      "AbsoluteMoniker": "D:0:0:{8EE1F6E9-F014-49F2-89F9-040BC4A5883F}|4_ForeignExchangeRate_DM\\4_ForeignExchangeRate_DM.dtproj|C:\\Users\\cosimo\\OneDrive\\Desktop\\Rocco\\ForeignExchangeRateDWH\\3_ForeingExchangeRate_DWH\\4_ForeignExchangeRate_DM\\4_Z_ALL_FX_EXCHANGE_DM.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{8EE1F6E9-F014-49F2-89F9-040BC4A5883F}|4_ForeignExchangeRate_DM\\4_ForeignExchangeRate_DM.dtproj|solutionrelative:4_ForeignExchangeRate_DM\\4_Z_ALL_FX_EXCHANGE_DM.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,25 +19,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "4_B_FX_EXCHANGE_F.dtsx [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\cosimo\\OneDrive\\Desktop\\Rocco\\ForeignExchangeRateDWH\\3_ForeingExchangeRate_DWH\\4_ForeignExchangeRate_DM\\4_B_FX_EXCHANGE_F.dtsx",
-              "RelativeDocumentMoniker": "4_ForeignExchangeRate_DM\\4_B_FX_EXCHANGE_F.dtsx",
-              "ToolTip": "C:\\Users\\cosimo\\OneDrive\\Desktop\\Rocco\\ForeignExchangeRateDWH\\3_ForeingExchangeRate_DWH\\4_ForeignExchangeRate_DM\\4_B_FX_EXCHANGE_F.dtsx [Progettazione]",
-              "RelativeToolTip": "4_ForeignExchangeRate_DM\\4_B_FX_EXCHANGE_F.dtsx [Progettazione]",
+              "Title": "4_Z_ALL_FX_EXCHANGE_DM.dtsx [Progettazione]",
+              "DocumentMoniker": "C:\\Users\\cosimo\\OneDrive\\Desktop\\Rocco\\ForeignExchangeRateDWH\\3_ForeingExchangeRate_DWH\\4_ForeignExchangeRate_DM\\4_Z_ALL_FX_EXCHANGE_DM.dtsx",
+              "RelativeDocumentMoniker": "4_ForeignExchangeRate_DM\\4_Z_ALL_FX_EXCHANGE_DM.dtsx",
+              "ToolTip": "C:\\Users\\cosimo\\OneDrive\\Desktop\\Rocco\\ForeignExchangeRateDWH\\3_ForeingExchangeRate_DWH\\4_ForeignExchangeRate_DM\\4_Z_ALL_FX_EXCHANGE_DM.dtsx [Progettazione]",
+              "RelativeToolTip": "4_ForeignExchangeRate_DM\\4_Z_ALL_FX_EXCHANGE_DM.dtsx [Progettazione]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-04-10T09:42:38.263Z",
-              "EditorCaption": " [Progettazione]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "4_A_FX_EXCHANGE_L.dtsx [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\cosimo\\OneDrive\\Desktop\\Rocco\\ForeignExchangeRateDWH\\3_ForeingExchangeRate_DWH\\4_ForeignExchangeRate_DM\\4_A_FX_EXCHANGE_L.dtsx",
-              "RelativeDocumentMoniker": "4_ForeignExchangeRate_DM\\4_A_FX_EXCHANGE_L.dtsx",
-              "ToolTip": "C:\\Users\\cosimo\\OneDrive\\Desktop\\Rocco\\ForeignExchangeRateDWH\\3_ForeingExchangeRate_DWH\\4_ForeignExchangeRate_DM\\4_A_FX_EXCHANGE_L.dtsx [Progettazione]",
-              "RelativeToolTip": "4_ForeignExchangeRate_DM\\4_A_FX_EXCHANGE_L.dtsx [Progettazione]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-04-10T09:30:26.695Z",
+              "WhenOpened": "2024-04-10T09:56:58.15Z",
               "EditorCaption": " [Progettazione]"
             }
           ]

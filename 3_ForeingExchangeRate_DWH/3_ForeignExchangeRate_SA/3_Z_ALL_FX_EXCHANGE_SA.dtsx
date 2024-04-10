@@ -1,0 +1,123 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/10/2024 11:54:56 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CO-CO"
+  DTS:CreatorName="CO-CO\cosimo"
+  DTS:DTSID="{1DF42956-970E-44C4-BFBE-33C2912E905F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{41D0AF66-B126-46EE-83A1-146761682198}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute S package"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Attività Esegui pacchetto"
+      DTS:DTSID="{6F9FCB0A-4BB9-48B4-9F74-6CEDFC7638DD}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute S package"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>3_A_FX_EXCHANGE_S.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SF package"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Attività Esegui pacchetto"
+      DTS:DTSID="{d5d9e466-995c-4e65-8ab1-a4e0f758179d}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SF package"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>3_B_FX_EXCHANGE_SF.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Vincolo]"
+      DTS:CreationName=""
+      DTS:DTSID="{F2A521B9-EA98-4250-AD7E-B035D94F56AF}"
+      DTS:From="Package\Execute S package"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Vincolo"
+      DTS:To="Package\Execute SF package" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Execute S package"
+          TopLeft="205,96" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Execute SF package"
+          TopLeft="378,195" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo]"
+          TopLeft="292,138">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="176,57"
+              Start="0,0"
+              End="176,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5"
+                    Point2="0,28.5"
+                    Point3="4,28.5" />
+                  <mssgle:LineSegment
+                    End="172,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="172,28.5"
+                    Point2="176,28.5"
+                    Point3="176,32.5" />
+                  <mssgle:LineSegment
+                    End="176,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
