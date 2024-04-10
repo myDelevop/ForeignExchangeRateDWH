@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="2_A_FX_RATES_SAMPLE_T"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{7BBE0F92-550F-486B-9A39-E813D20C0D47}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{4B6D05C1-146E-4572-95B9-C3BB35890A87}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACI7opJQMa7nqYt0mMglth2RkFvbg6wZsQWuxgA4HzA9QAAAAAOgAAAAAIAACAAAABslMvRFa+pAtPhV0/07/Mgyfdq8MA4kc7bOLO40xYFCiAAAAAQ5Ql4bnYW2TkRi5nV7Ik6cFsPAZhLJ7AkyGx0bTOXMUAAAAAoMjz2Ei3hHm6jL8LKTfNqgcth4oquixQfVSOKgEbTCAN7oOdObrq0GhzGGHqHyHNxlqWq0CMDMpA6kfoDWYvR</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABV/Ds8Q/egGdpu53H3oOxc/Xvl4biVtYZnoIZJWTeJyQAAAAAOgAAAAAIAACAAAAA4qdwtVZeiqXqOCZbVxGqkBsKO4OG57FD6aG0rhbhojiAAAAAtABHieJliJppxkH32jR3BdQbGDOGFoJKugBkWijVJ0UAAAADl04TjcK+o8m8JwJXM1zRzlu+RsdX9cPE/iw7StvONQuosOA4pFh/hCx150pyzXXFzuV9KH5YvyxBAWiMFP5nc</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -60,7 +60,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{04A3ADE7-0667-4598-A36C-79C31513C74A}"
-              SQLTask:SqlStatementSource="/* check for duplicates */&#xA;&#xA;SELECT DISTINCT eventId&#xA;INTO #TEMP_DUPLICATES&#xA;FROM A_FX_EXCHANGE_TT_RATES_SAMPLE&#xA;GROUP BY eventId&#xA;HAVING COUNT(*)&gt;1;&#xA;&#xA;INSERT INTO A_FX_EXCHANGE_E_RATES_SAMPLE&#xA;SELECT DISTINCT eventId,&#xA;&#x9;CURRENT_TIMESTAMP,&#xA;&#x9;'Duplicate rows in source CSV'&#xA;FROM #TEMP_DUPLICATES;&#xA;&#xA;&#xA;SELECT *&#xA;INTO A_FX_EXCHANGE_T_RATES_SAMPLE&#xA;FROM A_FX_EXCHANGE_TT_RATES_SAMPLE&#xA;WHERE eventId NOT IN (&#xA;&#x9;SELECT DISTINCT eventId&#xA;&#x9;FROM #TEMP_DUPLICATES&#xA;);&#xA;&#xA;DROP TABLE #TEMP_DUPLICATES;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="/* check for duplicates */&#xA;&#xA;SELECT DISTINCT eventId&#xA;INTO #TEMP_DUPLICATES&#xA;FROM A_FX_EXCHANGE_TT_RATES_SAMPLE&#xA;GROUP BY eventId&#xA;HAVING COUNT(*)&gt;1;&#xA;&#xA;INSERT INTO A_FX_EXCHANGE_E_RATES_SAMPLE&#xA;SELECT DISTINCT eventId,&#xA;&#x9;CURRENT_TIMESTAMP,&#xA;&#x9;'Duplicate rows in source CSV'&#xA;FROM #TEMP_DUPLICATES;&#xA;&#xA;IF OBJECT_ID('A_FX_EXCHANGE_T_RATES_SAMPLE') IS NOT NULL&#xA;&#x9;DROP TABLE A_FX_EXCHANGE_T_RATES_SAMPLE&#xA;&#xA;SELECT *&#xA;INTO A_FX_EXCHANGE_T_RATES_SAMPLE&#xA;FROM A_FX_EXCHANGE_TT_RATES_SAMPLE&#xA;WHERE eventId NOT IN (&#xA;&#x9;SELECT DISTINCT eventId&#xA;&#x9;FROM #TEMP_DUPLICATES&#xA;);&#xA;&#xA;DROP TABLE #TEMP_DUPLICATES;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>

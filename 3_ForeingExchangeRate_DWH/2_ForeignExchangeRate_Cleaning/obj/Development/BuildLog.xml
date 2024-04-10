@@ -2,13 +2,18 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>2_ForeignExchangeRate_Cleaning</Name>
-    <LastWriteTime>2024-04-09T09:26:10.858105Z</LastWriteTime>
+    <LastWriteTime>2024-04-10T10:01:04.6647111Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>2_A_FX_RATES_SAMPLE_T.dtsx</Name>
-      <LastWriteTime>2024-04-09T09:26:06.5680003Z</LastWriteTime>
+      <LastWriteTime>2024-04-10T10:05:10.0530873Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>2_Z_ALL_FX_EXCHANGE_Cleaning_T.dtsx</Name>
+      <LastWriteTime>2024-04-10T09:54:14.0466315Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

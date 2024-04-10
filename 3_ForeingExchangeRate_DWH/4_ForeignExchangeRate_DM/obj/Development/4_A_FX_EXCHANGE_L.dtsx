@@ -1,0 +1,1252 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/10/2024 11:29:57 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CO-CO"
+  DTS:CreatorName="CO-CO\cosimo"
+  DTS:DTSID="{C6A98E7A-5924-4A1C-802E-B10462015F31}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="4_A_FX_EXCHANGE_L"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{B1B2832C-EABA-401A-84AB-1A894E0D7B5A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.DM_FX_EXCHANGE.fxUserDWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{12EF7BB9-D53D-4C15-84C1-59FF0798E5FB}"
+      DTS:ObjectName="localhost.DM_FX_EXCHANGE.fxUserDWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=fxUserDWH;Initial Catalog=DM_FX_EXCHANGE;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-4_A_FX_EXCHANGE_L-{12EF7BB9-D53D-4C15-84C1-59FF0798E5FB}localhost.DM_FX_EXCHANGE.fxUserDWH;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABgQCr66K3j3BDUR9/AfAV19XzAsjGr1vQ/HPLBTIZkzQAAAAAOgAAAAAIAACAAAAC8zbv9QTMD4lu9P3np2u/snQIABLa1KdBcG3dJduOpQiAAAAD1tasPNBWQaB4okn1kBHyk822Lq6uB2LGGQvJI7uFvdkAAAAAwkntCBCqyuY3v76RfdsbD81TcrysAxluKxJUGpWxQWAvMGRchJbTH23NNzGWoSr8l9u/Wk4JMTiW3InPtSgvO</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.SA_FX_EXCHANGE.fxUserDWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4ED7C108-33F4-4B2A-A7D2-5CA47FA99EAA}"
+      DTS:ObjectName="localhost.SA_FX_EXCHANGE.fxUserDWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=fxUserDWH;Initial Catalog=SA_FX_EXCHANGE;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-4_A_FX_EXCHANGE_L-{4ED7C108-33F4-4B2A-A7D2-5CA47FA99EAA}localhost.SA_FX_EXCHANGE.fxUserDWH;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB8mebmxFyitpBYZWeABUnqyjZxOvHA/uul0KjyXtTpVQAAAAAOgAAAAAIAACAAAADIVmuoz8eaEsJLFH7h6ZgRAUO2ZsY4grISt8GUUct0bSAAAAAt4TopBiHsWyxoQqBb+KHEgXj8tAEo5FNikii6ES0sQ0AAAACr8NedU5xCON3yDKckDVszGwJYSFiIsuTB6zRhZtG1doMjzkkJfJHyg11cYY4aIs0zFr2zkN0Ofb8xENT9TAIz</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Creation of Dimensions in DM"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Contenitore Sequenza"
+      DTS:DTSID="{D724F90B-F913-45AF-B081-35A446DE10AE}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Creation of Dimensions in DM">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Creation of Dimensions in DM\CURRENCY"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Contenitore Sequenza"
+          DTS:DTSID="{00B85285-DC82-4744-A57A-913A5C267212}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="CURRENCY">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Attività Flusso di dati"
+              DTS:DTSID="{6B13C1EC-CE76-4FB4-AB35-6EF15C08C419}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="L_CURRENCY"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1">
+                  <components>
+                    <component
+                      refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY"
+                      componentClassID="Microsoft.OLEDBDestination"
+                      contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
+                      description="Destinazione OLE DB"
+                      name="L_CURRENCY"
+                      usesDispositions="true"
+                      version="4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                          name="OpenRowset">[dbo].[A_FX_EXCHANGE_L_CURRENCY]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="Comando SQL da eseguire."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica la modalità utilizzata per accedere al database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">3</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se i valori specificati per le colonne Identity verranno copiati nella destinazione. Se false, i valori delle colonne Identity verranno generati automaticamente nella destinazione. Applicabile solo se è abilitato il caricamento rapido."
+                          name="FastLoadKeepIdentity">true</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se per le colonne con valori Null, tali valori verranno inseriti nella destinazione. Se false, per le colonne con valori Null verranno inseriti i valori predefiniti corrispondenti nella destinazione. Applicabile solo se è attivato il caricamento rapido."
+                          name="FastLoadKeepNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifica le opzioni da utilizzare con il caricamento rapido. Applicabile solo se è attivato il caricamento rapido."
+                          name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica se vengono eseguiti commit durante l'inserimento dei dati. Il valore 0 indica che verrà eseguito un solo commit al termine dell'inserimento dei dati. Applicabile solo se è attivato il caricamento rapido."
+                          name="FastLoadMaxInsertCommitSize">2147483647</property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Connections[OleDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[localhost.DM_FX_EXCHANGE.fxUserDWH]"
+                          connectionManagerRefId="Package.ConnectionManagers[localhost.DM_FX_EXCHANGE.fxUserDWH]"
+                          description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <inputs>
+                        <input
+                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB]"
+                          errorOrTruncationOperation="Inserimento"
+                          errorRowDisposition="FailComponent"
+                          hasSideEffects="true"
+                          name="Input destinazione OLE DB">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].Columns[CurrencyIds]"
+                              cachedDataType="i4"
+                              cachedName="CurrencyIds"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[CurrencyIds]"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[CurrencyIds]" />
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].Columns[Name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="3"
+                              cachedName="Name"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[Name]"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Name]" />
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].Columns[Description]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="23"
+                              cachedName="Description"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[Description]"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Description]" />
+                          </inputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[CurrencyIds]"
+                              dataType="i4"
+                              name="CurrencyIds" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[Name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="3"
+                              name="Name" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB].ExternalColumns[Description]"
+                              codePage="1252"
+                              dataType="str"
+                              length="23"
+                              name="Description" />
+                          </externalMetadataColumns>
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Outputs[Output errori destinazione OLE DB]"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="Output errori destinazione OLE DB"
+                          synchronousInputId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY"
+                      componentClassID="Microsoft.OLEDBSource"
+                      contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+                      description="Origine OLE DB"
+                      name="S_CURRENCY"
+                      usesDispositions="true"
+                      version="7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                          name="OpenRowset">[dbo].[A_FX_EXCHANGE_S_CURRENCY]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="Comando SQL da eseguire."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                        <property
+                          dataType="System.String"
+                          description="Variabile che contiene il comando SQL da eseguire."
+                          name="SqlCommandVariable"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica la modalità utilizzata per accedere al database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Mapping tra i parametri nel comando SQL e le variabili."
+                          name="ParameterMapping"></property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Connections[OleDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[localhost.SA_FX_EXCHANGE.fxUserDWH]"
+                          connectionManagerRefId="Package.ConnectionManagers[localhost.SA_FX_EXCHANGE.fxUserDWH]"
+                          description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB]"
+                          name="Output origine OLE DB">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[CurrencyIds]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[CurrencyIds]"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[CurrencyIds]"
+                              name="CurrencyIds"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[Name]"
+                              length="3"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Name]"
+                              name="Name"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Description]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[Description]"
+                              length="23"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].Columns[Description]"
+                              name="Description"
+                              truncationRowDisposition="FailComponent" />
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[CurrencyIds]"
+                              dataType="i4"
+                              name="CurrencyIds" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[Name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="3"
+                              name="Name" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB].ExternalColumns[Description]"
+                              codePage="1252"
+                              dataType="str"
+                              length="23"
+                              name="Description" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB]"
+                          isErrorOut="true"
+                          name="Output errori origine OLE DB">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[CurrencyIds]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[CurrencyIds]"
+                              name="CurrencyIds" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[Name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="3"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[Name]"
+                              name="Name" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[Description]"
+                              codePage="1252"
+                              dataType="str"
+                              length="23"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[Description]"
+                              name="Description" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                  </components>
+                  <paths>
+                    <path
+                      refId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY.Paths[Output origine OLE DB]"
+                      endId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY.Inputs[Input destinazione OLE DB]"
+                      name="Output origine OLE DB"
+                      startId="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY.Outputs[Output origine OLE DB]" />
+                  </paths>
+                </pipeline>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Creation of Dimensions in DM\CURRENCY\TRUNCATE"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Attività Esegui SQL"
+              DTS:DTSID="{4d9316dc-b6cb-4ec0-9271-69c8a00e6468}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="TRUNCATE"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{12EF7BB9-D53D-4C15-84C1-59FF0798E5FB}"
+                  SQLTask:SqlStatementSource="IF OBJECT_ID('A_FX_EXCHANGE_L_CURRENCY') IS NOT NULL&#xA;TRUNCATE TABLE A_FX_EXCHANGE_L_CURRENCY" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Creation of Dimensions in DM\CURRENCY.PrecedenceConstraints[Vincolo]"
+              DTS:CreationName=""
+              DTS:DTSID="{E04E87E7-115A-47BA-9A80-521D76D25A19}"
+              DTS:From="Package\Creation of Dimensions in DM\CURRENCY\TRUNCATE"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Vincolo"
+              DTS:To="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Creation of Dimensions in DM\DATETIME"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Contenitore Sequenza"
+          DTS:DTSID="{d696c181-9fa9-4cdd-9311-2f5cabe8f573}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DATETIME">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Attività Flusso di dati"
+              DTS:DTSID="{47173a77-79d3-4b07-9979-926c73f48141}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="L_DATETIME"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1">
+                  <components>
+                    <component
+                      refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME"
+                      componentClassID="Microsoft.OLEDBDestination"
+                      contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
+                      description="Destinazione OLE DB"
+                      name="L_DATETIME"
+                      usesDispositions="true"
+                      version="4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                          name="OpenRowset">[dbo].[A_FX_EXCHANGE_L_DATETIME]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="Comando SQL da eseguire."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica la modalità utilizzata per accedere al database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">3</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se i valori specificati per le colonne Identity verranno copiati nella destinazione. Se false, i valori delle colonne Identity verranno generati automaticamente nella destinazione. Applicabile solo se è abilitato il caricamento rapido."
+                          name="FastLoadKeepIdentity">true</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se per le colonne con valori Null, tali valori verranno inseriti nella destinazione. Se false, per le colonne con valori Null verranno inseriti i valori predefiniti corrispondenti nella destinazione. Applicabile solo se è attivato il caricamento rapido."
+                          name="FastLoadKeepNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifica le opzioni da utilizzare con il caricamento rapido. Applicabile solo se è attivato il caricamento rapido."
+                          name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica se vengono eseguiti commit durante l'inserimento dei dati. Il valore 0 indica che verrà eseguito un solo commit al termine dell'inserimento dei dati. Applicabile solo se è attivato il caricamento rapido."
+                          name="FastLoadMaxInsertCommitSize">2147483647</property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Connections[OleDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[localhost.DM_FX_EXCHANGE.fxUserDWH]"
+                          connectionManagerRefId="Package.ConnectionManagers[localhost.DM_FX_EXCHANGE.fxUserDWH]"
+                          description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <inputs>
+                        <input
+                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB]"
+                          errorOrTruncationOperation="Inserimento"
+                          errorRowDisposition="FailComponent"
+                          hasSideEffects="true"
+                          name="Input destinazione OLE DB">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[DatetimeIds]"
+                              cachedDataType="i4"
+                              cachedName="DatetimeIds"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[DatetimeIds]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[DatetimeIds]" />
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[eventTime]"
+                              cachedDataType="i8"
+                              cachedName="eventTime"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[eventTime]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[eventTime]" />
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Datetime]"
+                              cachedDataType="dbTimeStamp"
+                              cachedName="Datetime"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Datetime]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Datetime]" />
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Date]"
+                              cachedDataType="dbDate"
+                              cachedName="Date"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Date]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Date]" />
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Year]"
+                              cachedDataType="i4"
+                              cachedName="Year"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Year]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Year]" />
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Month]"
+                              cachedDataType="i4"
+                              cachedName="Month"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Month]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Month]" />
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Day]"
+                              cachedDataType="i4"
+                              cachedName="Day"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Day]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Day]" />
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Semester]"
+                              cachedDataType="i4"
+                              cachedName="Semester"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Semester]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Semester]" />
+                            <inputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].Columns[Quarter]"
+                              cachedDataType="i4"
+                              cachedName="Quarter"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Quarter]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Quarter]" />
+                          </inputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[DatetimeIds]"
+                              dataType="i4"
+                              name="DatetimeIds" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[eventTime]"
+                              dataType="i8"
+                              name="eventTime" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Datetime]"
+                              dataType="dbTimeStamp"
+                              name="Datetime" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Date]"
+                              dataType="dbDate"
+                              name="Date" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Year]"
+                              dataType="i4"
+                              name="Year" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Month]"
+                              dataType="i4"
+                              name="Month" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Day]"
+                              dataType="i4"
+                              name="Day" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Semester]"
+                              dataType="i4"
+                              name="Semester" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB].ExternalColumns[Quarter]"
+                              dataType="i4"
+                              name="Quarter" />
+                          </externalMetadataColumns>
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Outputs[Output errori destinazione OLE DB]"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="Output errori destinazione OLE DB"
+                          synchronousInputId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME"
+                      componentClassID="Microsoft.OLEDBSource"
+                      contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+                      description="Origine OLE DB"
+                      name="S_DATETIME"
+                      usesDispositions="true"
+                      version="7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                          name="OpenRowset">[dbo].[A_FX_EXCHANGE_S_DATETIME]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="Comando SQL da eseguire."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                        <property
+                          dataType="System.String"
+                          description="Variabile che contiene il comando SQL da eseguire."
+                          name="SqlCommandVariable"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica la modalità utilizzata per accedere al database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Mapping tra i parametri nel comando SQL e le variabili."
+                          name="ParameterMapping"></property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Connections[OleDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[localhost.SA_FX_EXCHANGE.fxUserDWH]"
+                          connectionManagerRefId="Package.ConnectionManagers[localhost.SA_FX_EXCHANGE.fxUserDWH]"
+                          description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB]"
+                          name="Output origine OLE DB">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[DatetimeIds]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[DatetimeIds]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[DatetimeIds]"
+                              name="DatetimeIds"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[eventTime]"
+                              dataType="i8"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[eventTime]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[eventTime]"
+                              name="eventTime"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Datetime]"
+                              dataType="dbTimeStamp"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Datetime]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Datetime]"
+                              name="Datetime"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Date]"
+                              dataType="dbDate"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Date]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Date]"
+                              name="Date"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Year]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Year]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Year]"
+                              name="Year"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Month]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Month]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Month]"
+                              name="Month"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Day]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Day]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Day]"
+                              name="Day"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Semester]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Semester]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Semester]"
+                              name="Semester"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Quarter]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Quarter]"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].Columns[Quarter]"
+                              name="Quarter"
+                              truncationRowDisposition="FailComponent" />
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[DatetimeIds]"
+                              dataType="i4"
+                              name="DatetimeIds" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[eventTime]"
+                              dataType="i8"
+                              name="eventTime" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Datetime]"
+                              dataType="dbTimeStamp"
+                              name="Datetime" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Date]"
+                              dataType="dbDate"
+                              name="Date" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Year]"
+                              dataType="i4"
+                              name="Year" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Month]"
+                              dataType="i4"
+                              name="Month" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Day]"
+                              dataType="i4"
+                              name="Day" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Semester]"
+                              dataType="i4"
+                              name="Semester" />
+                            <externalMetadataColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB].ExternalColumns[Quarter]"
+                              dataType="i4"
+                              name="Quarter" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB]"
+                          isErrorOut="true"
+                          name="Output errori origine OLE DB">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[DatetimeIds]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[DatetimeIds]"
+                              name="DatetimeIds" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[eventTime]"
+                              dataType="i8"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[eventTime]"
+                              name="eventTime" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Datetime]"
+                              dataType="dbTimeStamp"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Datetime]"
+                              name="Datetime" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Date]"
+                              dataType="dbDate"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Date]"
+                              name="Date" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Year]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Year]"
+                              name="Year" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Month]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Month]"
+                              name="Month" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Day]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Day]"
+                              name="Day" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Semester]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Semester]"
+                              name="Semester" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Quarter]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[Quarter]"
+                              name="Quarter" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                  </components>
+                  <paths>
+                    <path
+                      refId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME.Paths[Output origine OLE DB]"
+                      endId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME.Inputs[Input destinazione OLE DB]"
+                      name="Output origine OLE DB"
+                      startId="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME.Outputs[Output origine OLE DB]" />
+                  </paths>
+                </pipeline>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Creation of Dimensions in DM\DATETIME\TRUNCATE"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Attività Esegui SQL"
+              DTS:DTSID="{c9cbfd77-88c3-42b5-807d-eeebfae6c555}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="TRUNCATE"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{12EF7BB9-D53D-4C15-84C1-59FF0798E5FB}"
+                  SQLTask:SqlStatementSource="IF OBJECT_ID('A_FX_EXCHANGE_L_DATETIME') IS NOT NULL&#xA;TRUNCATE TABLE A_FX_EXCHANGE_L_DATETIME" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Creation of Dimensions in DM\DATETIME.PrecedenceConstraints[Vincolo]"
+              DTS:CreationName=""
+              DTS:DTSID="{db432e01-c87c-4f36-bdde-3a7da50a7d5d}"
+              DTS:From="Package\Creation of Dimensions in DM\DATETIME\TRUNCATE"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Vincolo"
+              DTS:To="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Creation of Dimensions in DM.PrecedenceConstraints[Vincolo]"
+          DTS:CreationName=""
+          DTS:DTSID="{DED78E90-6E46-478E-AF50-E7E02594B396}"
+          DTS:From="Package\Creation of Dimensions in DM\CURRENCY"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Vincolo"
+          DTS:To="Package\Creation of Dimensions in DM\DATETIME" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY"
+          TopLeft="100,132" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Creation of Dimensions in DM\CURRENCY\TRUNCATE"
+          TopLeft="35,25" />
+        <EdgeLayout
+          Id="Package\Creation of Dimensions in DM\CURRENCY.PrecedenceConstraints[Vincolo]"
+          TopLeft="104.5,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72.5,65"
+              Start="0,0"
+              End="72.5,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="4,32.5" />
+                  <mssgle:LineSegment
+                    End="68.5,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="68.5,32.5"
+                    Point2="72.5,32.5"
+                    Point3="72.5,36.5" />
+                  <mssgle:LineSegment
+                    End="72.5,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="305,233"
+          Size="305,276"
+          Id="Package\Creation of Dimensions in DM\CURRENCY"
+          TopLeft="77,55" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME"
+          TopLeft="100,132" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Creation of Dimensions in DM\DATETIME\TRUNCATE"
+          TopLeft="35,25" />
+        <EdgeLayout
+          Id="Package\Creation of Dimensions in DM\DATETIME.PrecedenceConstraints[Vincolo]"
+          TopLeft="104.5,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69,65"
+              Start="0,0"
+              End="69,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="4,32.5" />
+                  <mssgle:LineSegment
+                    End="65,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65,32.5"
+                    Point2="69,32.5"
+                    Point3="69,36.5" />
+                  <mssgle:LineSegment
+                    End="69,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="305,264"
+          Size="305,307"
+          Id="Package\Creation of Dimensions in DM\DATETIME"
+          TopLeft="483,184" />
+        <EdgeLayout
+          Id="Package\Creation of Dimensions in DM.PrecedenceConstraints[Vincolo]"
+          TopLeft="382,193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="101,144.5"
+              Start="0,0"
+              End="93.5,144.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="46.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46.5,0"
+                    Point2="50.5,0"
+                    Point3="50.5,4" />
+                  <mssgle:LineSegment
+                    End="50.5,140.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.5,140.5"
+                    Point2="50.5,144.5"
+                    Point3="54.5,144.5" />
+                  <mssgle:LineSegment
+                    End="93.5,144.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="840,565"
+          Size="840,608"
+          Id="Package\Creation of Dimensions in DM"
+          TopLeft="144,83" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY"
+          TopLeft="136,78" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY"
+          TopLeft="231,192" />
+        <EdgeLayout
+          Id="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY.Paths[Output origine OLE DB]"
+          TopLeft="213.5,120">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="94.5,72"
+              Start="0,0"
+              End="94.5,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="4,36" />
+                  <mssgle:LineSegment
+                    End="90.5,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="90.5,36"
+                    Point2="94.5,36"
+                    Point3="94.5,40" />
+                  <mssgle:LineSegment
+                    End="94.5,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\L_CURRENCY">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Creation of Dimensions in DM\CURRENCY\L_CURRENCY\S_CURRENCY">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME"
+          TopLeft="231,192" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME"
+          TopLeft="136,78" />
+        <EdgeLayout
+          Id="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME.Paths[Output origine OLE DB]"
+          TopLeft="210,120">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="94.5,72"
+              Start="0,0"
+              End="94.5,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="4,36" />
+                  <mssgle:LineSegment
+                    End="90.5,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="90.5,36"
+                    Point2="94.5,36"
+                    Point3="94.5,40" />
+                  <mssgle:LineSegment
+                    End="94.5,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\L_DATETIME">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Creation of Dimensions in DM\DATETIME\L_DATETIME\S_DATETIME">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

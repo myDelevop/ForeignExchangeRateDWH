@@ -1,19 +1,24 @@
 <?xml version="1.0"?>
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
-    <Name>1_ForeingExchangeRate_Import</Name>
-    <LastWriteTime>2024-04-10T10:00:41.3676767Z</LastWriteTime>
+    <Name>4_ForeignExchangeRate_DM</Name>
+    <LastWriteTime>2024-04-10T10:06:46.6784318Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>1_Z_ALL_FX_EXCHANGE_Import_TT.dtsx</Name>
-      <LastWriteTime>2024-04-10T09:52:29.1860214Z</LastWriteTime>
+      <Name>4_A_FX_EXCHANGE_L.dtsx</Name>
+      <LastWriteTime>2024-04-10T09:43:50.4109346Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>1_A_FX_RATES_SAMPLE_TT.dtsx</Name>
-      <LastWriteTime>2024-04-09T09:23:59.2002712Z</LastWriteTime>
+      <Name>4_B_FX_EXCHANGE_F.dtsx</Name>
+      <LastWriteTime>2024-04-10T09:48:08.169529Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>4_Z_ALL_FX_EXCHANGE_DM.dtsx</Name>
+      <LastWriteTime>2024-04-10T09:58:25.1544325Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
