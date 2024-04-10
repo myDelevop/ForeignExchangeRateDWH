@@ -99,13 +99,47 @@ CREATE TABLE [dbo].[A_FX_EXCHANGE_S_DATETIME](
 )
 
 
-CREATE TABLE [dbo].[B_FX_EXCHANGE_SF_EXCHANGE_RATE] (
+CREATE TABLE [dbo].[B_FX_EXCHANGE_SF_SAMPLE_RATE] (
 	eventIds int,
 	eventId bigint,
 	eventTimeIds int,
-	yesterdayNYTimeIds int,
+	baseCurrencyIds int,
+	quoteCurrencyIds int,
+	rate float
+)
+
+CREATE TABLE [dbo].[B_FX_EXCHANGE_SF_CURRENCY_RATE] (
 	baseCurrencyIds int,
 	quoteCurrencyIds int,
 	currentRate float,
-	changePercentage float
+	yesterdayNYTimeChange float
 )
+
+
+
+
+
+USE DM_FX_EXCHANGE;
+
+
+SELECT * 
+INTO [dbo].[A_FX_EXCHANGE_L_CURRENCY] 
+FROM SA_FX_EXCHANGE..A_FX_EXCHANGE_S_CURRENCY 
+WHERE 1=0;
+
+
+SELECT * 
+INTO [dbo].[A_FX_EXCHANGE_L_DATETIME]
+FROM SA_FX_EXCHANGE..A_FX_EXCHANGE_S_DATETIME 
+WHERE 1=0;
+
+
+SELECT *
+INTO [dbo].[B_FX_EXCHANGE_F_SAMPLE_RATE]
+FROM SA_FX_EXCHANGE..B_FX_EXCHANGE_SF_SAMPLE_RATE 
+WHERE 1=0;
+
+SELECT * 
+INTO [dbo].[B_FX_EXCHANGE_F_CURRENCY_RATE]
+FROM SA_FX_EXCHANGE..B_FX_EXCHANGE_SF_CURRENCY_RATE 
+WHERE 1=0;
