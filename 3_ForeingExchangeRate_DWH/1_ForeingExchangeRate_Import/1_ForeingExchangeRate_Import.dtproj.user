@@ -8,6 +8,8 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
+        <ServerName>localhost</ServerName>
+        <PathOnServer>/SSISDB/1_ForeingExchangeRate_Import/1_ForeingExchangeRate_Import</PathOnServer>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>
