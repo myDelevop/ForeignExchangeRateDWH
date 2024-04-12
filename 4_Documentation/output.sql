@@ -1,6 +1,6 @@
 USE DM_FX_EXCHANGE
 
-SELECT CONCAT(B.Name,'/',C.NAME) AS ccy_couple,
+SELECT CONCAT('"',B.Name,'/',C.NAME,'"') AS ccy_couple,
 	A.currentRate AS rate,
 	CONCAT('"', A.yesterdayNYTimeChange, '"') AS change
 FROM  B_FX_EXCHANGE_F_CURRENCY_RATE A
