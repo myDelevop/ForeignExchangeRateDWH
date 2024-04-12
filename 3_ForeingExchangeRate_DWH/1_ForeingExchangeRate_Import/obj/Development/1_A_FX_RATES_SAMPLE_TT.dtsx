@@ -11,8 +11,8 @@
   DTS:LocaleID="6153"
   DTS:ObjectName="1_A_FX_RATES_SAMPLE_T"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{78AAFB5C-5C92-40AF-A3A5-328E5BF10FA3}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{256DB2B8-1E77-48E8-B208-95DFE7D1CFED}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACEFOnUYrNcPRPlJ+mPK7xmgEKf1Zr174iv8rhCn8UWcgAAAAAOgAAAAAIAACAAAADhC2DbEezRxKsP+NgwQlXJ0q7N43iRtmkzABnrGiJU1CAAAAA1fWeJlXYG1gx0nrbGjVVYcQnhxoX4mocYrGiaVU0VzEAAAADM/IeZoJx3embH7HRzbkLBYmR6P8ACwoCok/ghvxMZXugRmuG8IJL4PUxQWTXOKNfFmxcrd8mwnyc/gZLysQ8n</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADvLmW42egyOiKqGmprmi57fpHXJ3CraJLLxIub4g67cgAAAAAOgAAAAAIAACAAAADJNlgZAxZq2OABQCNtzVDib+qSSYpBDzuA4mIN9h62byAAAAAZaJLlg0zB3ihhhl+p3jTKVtGVe1IN36mAPNynprx1rkAAAACkiH+eEDHqfucpPoaSRRYy/CBWhtwZQqreiXgGgGB/b0ZGfBk9MAMprPpQpGGqhUfF25J4OcRhKlavZAMyKqzi</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -48,7 +48,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\cosimo\OneDrive\Desktop\Rocco\ForeignExchangeRateDWH\3_ForeingExchangeRate_DWH\1_ForeingExchangeRate_Import\input\rates_sample.csv">
+          DTS:ConnectionString="C:\rates_sample.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="event_id"
-              DTS:DTSID="{72E3A234-174F-43C2-BF79-527B9480DEF0}"
+              DTS:DTSID="{AF4CB84B-63B8-4389-9165-62CB4841966A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="event_time"
-              DTS:DTSID="{9F8AB6F4-FC74-480C-98B5-1A32D2CE940C}"
+              DTS:DTSID="{A2DD3C38-D1AD-4596-9A71-C613D3F85B66}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ccy_couple"
-              DTS:DTSID="{F275DE6C-96C2-4950-9036-516B516F3D13}"
+              DTS:DTSID="{94FEAC16-59A7-471A-8B57-518D88A54AF2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="rate"
-              DTS:DTSID="{F7303731-EB5F-4057-832F-1DA4DF2B6E4E}"
+              DTS:DTSID="{D0CF6882-0109-4F7D-92C0-A247B26B3E9A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
