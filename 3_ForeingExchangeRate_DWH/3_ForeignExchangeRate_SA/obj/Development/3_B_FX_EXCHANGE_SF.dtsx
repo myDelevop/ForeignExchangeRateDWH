@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="3_B_FX_EXCHANGE_SF"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{7B7E0BA3-17A8-443B-86A1-A5B2621A8082}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{DB7782FC-39B3-4C2C-8769-522D64F4FD54}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA5IumdCXL72ZnRGyjxM+DHa9GMUIBFNIlwuCB+4QVWvQAAAAAOgAAAAAIAACAAAADqzUDK965gZ5/9K3Bsasvr2Ao3heoSHmPsiWQEYZY0miAAAACR/HQpCmBGSLbVG9xG1psL3458GmaJOHGMM0wGPcCJwEAAAACfe9pPlig1RNnD1qd+9lc2Bn2LUtlBfgETBd5bydauWKY8WZGdakTROXLTF/JCLBbI994QYUC5MfgveFuoxrPt</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk0ylpGVJ9EmPzzU1yZreEgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAGOXqvPaC0c0XT1zvoAAR5VCUJcEY4GAr6frCXPHS4bQAAAAAOgAAAAAIAACAAAABCiWOu5ZRmfv2rRZkrRRNeYouzRE7TmCl+YkGbkY7fISAAAAC0swgeky+m2IiiJrCuDGuGF/vw0LRrDix663R0AZIM4kAAAACsoc9L2Jlln+kNFOyvxDyfaJWWdn0NsqSRlQ07QuydDBraN+xVCRUP+nc3aSETC66mH9mHyf1qjjf6rcNH72Xm</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -70,7 +70,7 @@
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
                   SQLTask:Connection="{5E205012-9A6C-4203-8810-F29325D4BE9F}"
-                  SQLTask:SqlStatementSource="-- B_FX_EXCHANGE_SF_CURRENCY_RATE&#xA;INSERT INTO B_FX_EXCHANGE_SF_CURRENCY_RATE &#xA;&#x9;SELECT A.CurrencyIds AS baseCurrencyIds,&#xA;&#x9;&#x9;B.CurrencyIds AS quoteCurrencyIds,&#xA;&#x9;&#x9;-1 AS currentRate,&#xA;&#x9;&#x9;-1 AS yesterdayNYTimeChange&#xA;&#x9;FROM A_FX_EXCHANGE_S_CURRENCY A&#xA;&#x9;LEFT JOIN A_FX_EXCHANGE_S_CURRENCY B&#xA;&#x9;ON A.CurrencyIds &lt;&gt; B.CurrencyIds&#xA;&#x9;WHERE A.CurrencyIds &lt;&gt; -1 AND B.CurrencyIds &lt;&gt;-1 &#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+                  SQLTask:SqlStatementSource="DECLARE @yesterdayNYTime DATETIME = CONVERT(Datetime, &#xA;&#x9;&#x9;dateadd(hour, 17, convert(datetime, convert(date, CURRENT_TIMESTAMP-1)))&#xA;&#x9;) AT TIME ZONE 'UTC' AT TIME ZONE 'US Eastern Standard Time'&#xA;&#xA;&#xA;&#xA;SELECT *,&#xA;ROW_NUMBER() OVER (PARTITION BY baseCurrencyIds, quoteCurrencyIds order BY baseCurrencyIds, quoteCurrencyIds, Datetime DESC) AS RN,&#xA;DATEDIFF(SECOND, Datetime,  CURRENT_TIMESTAMP) AS DateDiffInSeconds&#xA;INTO #CURRENT_RATE_TMP_1&#xA;FROM B_FX_EXCHANGE_SF_SAMPLE_RATE A&#xA;LEFT JOIN A_FX_EXCHANGE_S_DATETIME B&#xA;ON A.eventTimeIds = B.DatetimeIds&#xA;WHERE RATE &lt;&gt; 0&#xA;ORDER BY baseCurrencyIds, quoteCurrencyIds, Datetime DESC&#xA;&#xA;SELECT DISTINCT baseCurrencyIds, &#xA;&#x9;quoteCurrencyIds, &#xA;&#x9;Datetime,&#xA;&#x9;Rate&#xA;INTO #CURRENT_RATE_TMP_2&#xA;FROM #CURRENT_RATE_TMP_1&#xA;WHERE RN = 1 /* AND DateDiffInSeconds &lt;= 5 COMMENTED TO AVOID EMPTY ROWS */&#xA;ORDER BY baseCurrencyIds, quoteCurrencyIds, Datetime DESC&#xA;&#xA;SELECT *,&#xA;&#x9;ROW_NUMBER() OVER (PARTITION BY baseCurrencyIds, quoteCurrencyIds order BY baseCurrencyIds, quoteCurrencyIds, Datetime DESC) AS RN&#xA;INTO #NY_TIME_RATE_TMP_1&#xA;FROM B_FX_EXCHANGE_SF_SAMPLE_RATE A&#xA;LEFT JOIN A_FX_EXCHANGE_S_DATETIME B&#xA;ON A.eventTimeIds = B.DatetimeIds&#xA;WHERE A.RATE &lt;&gt; 0 AND B.Datetime &lt;= @yesterdayNYTime&#xA;ORDER BY A.baseCurrencyIds, A.quoteCurrencyIds, B.Datetime DESC&#xA;&#xA;&#xA;SELECT DISTINCT baseCurrencyIds, &#xA;&#x9;quoteCurrencyIds, &#xA;&#x9;Datetime,&#xA;&#x9;Rate&#xA;INTO #NY_TIME_RATE_TMP_2&#xA;FROM #NY_TIME_RATE_TMP_1&#xA;WHERE RN = 1&#xA;ORDER BY baseCurrencyIds, quoteCurrencyIds, Datetime DESC&#xA;&#xA;&#xA;&#xA;&#xA;SELECT *,&#xA;&#x9;ROW_NUMBER() OVER (PARTITION BY baseCurrencyIds, quoteCurrencyIds order BY baseCurrencyIds, quoteCurrencyIds, Datetime) AS RN&#xA;INTO #NY_TIME_RATE_TMP_3&#xA;FROM B_FX_EXCHANGE_SF_SAMPLE_RATE A&#xA;LEFT JOIN A_FX_EXCHANGE_S_DATETIME B&#xA;ON A.eventTimeIds = B.DatetimeIds&#xA;WHERE A.RATE &lt;&gt; 0 AND B.Datetime &gt; @yesterdayNYTime&#xA;ORDER BY A.baseCurrencyIds, A.quoteCurrencyIds, B.Datetime&#xA;&#xA;&#xA;SELECT DISTINCT baseCurrencyIds, &#xA;&#x9;quoteCurrencyIds, &#xA;&#x9;Datetime,&#xA;&#x9;Rate&#xA;INTO #NY_TIME_RATE_TMP_4&#xA;FROM #NY_TIME_RATE_TMP_3&#xA;WHERE RN = 1&#xA;ORDER BY baseCurrencyIds, quoteCurrencyIds, Datetime DESC&#xA;&#xA;&#xA;&#xA;SELECT DISTINCT A.baseCurrencyIds, &#xA;&#x9;A.quoteCurrencyIds, &#xA;&#x9;B.RATE AS pastRate,&#xA;&#x9;C.RATE AS futureRate,&#xA;&#x9;CASE WHEN B.baseCurrencyIds IS NOT NULL THEN B.RATE&#xA;&#x9;&#x9; WHEN C.baseCurrencyIds IS NOT NULL THEN C.RATE&#xA;&#x9;&#x9; ELSE 0 END AS YestardayRate&#xA;INTO #NY_TIME_RATE_TMP_5&#xA;FROM B_FX_EXCHANGE_SF_SAMPLE_RATE A&#xA;&#x9;LEFT JOIN #NY_TIME_RATE_TMP_2 B&#xA;&#x9;ON A.baseCurrencyIds = B.baseCurrencyIds AND A.quoteCurrencyIds = B.quoteCurrencyIds&#xA;&#x9;&#x9;LEFT JOIN #NY_TIME_RATE_TMP_4 C&#xA;&#x9;&#x9;ON A.baseCurrencyIds = C.baseCurrencyIds AND A.quoteCurrencyIds = C.quoteCurrencyIds&#xA;&#xA;&#xA;INSERT INTO B_FX_EXCHANGE_SF_CURRENCY_RATE &#xA;SELECT DISTINCT A.baseCurrencyIds, &#xA;&#x9;A.quoteCurrencyIds,&#xA;&#x9;B.Rate,&#xA;&#x9;C.YestardayRate / B.rate * 100 AS YestardayNYTimeChange&#xA;FROM B_FX_EXCHANGE_SF_SAMPLE_RATE A&#xA;&#x9;LEFT JOIN #CURRENT_RATE_TMP_2 B&#xA;&#x9;ON A.baseCurrencyIds = B.baseCurrencyIds AND A.quoteCurrencyIds = B.quoteCurrencyIds&#xA;&#x9;&#x9;LEFT JOIN #NY_TIME_RATE_TMP_5 C&#xA;&#x9;&#x9;ON A.baseCurrencyIds = C.baseCurrencyIds AND A.quoteCurrencyIds = C.quoteCurrencyIds&#xA;&#xA;DROP TABLE #CURRENT_RATE_TMP_1&#xA;DROP TABLE #CURRENT_RATE_TMP_2&#xA;DROP TABLE #NY_TIME_RATE_TMP_1&#xA;DROP TABLE #NY_TIME_RATE_TMP_2&#xA;DROP TABLE #NY_TIME_RATE_TMP_3&#xA;DROP TABLE #NY_TIME_RATE_TMP_4&#xA;DROP TABLE #NY_TIME_RATE_TMP_5&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
@@ -184,55 +184,6 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="179,42"
-          Id="Package\Staging Area for Facts\SF_SAMPLE_RATE\SF_SAMPLE_RATE"
-          TopLeft="78,177" />
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Staging Area for Facts\SF_SAMPLE_RATE\TRUNCATE"
-          TopLeft="34,27" />
-        <EdgeLayout
-          Id="Package\Staging Area for Facts\SF_SAMPLE_RATE.PrecedenceConstraints[Vincolo]"
-          TopLeft="103.5,69">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="64,108"
-              Start="0,0"
-              End="64,100.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,50"
-                    Point2="0,54"
-                    Point3="4,54" />
-                  <mssgle:LineSegment
-                    End="60,54" />
-                  <mssgle:CubicBezierSegment
-                    Point1="60,54"
-                    Point2="64,54"
-                    Point3="64,58" />
-                  <mssgle:LineSegment
-                    End="64,100.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="320,292"
-          Size="320,335"
-          Id="Package\Staging Area for Facts\SF_SAMPLE_RATE"
-          TopLeft="86,56" />
-        <NodeLayout
           Size="197,42"
           Id="Package\Staging Area for Facts\SF_CURRENCY_RATE\SF_CURRENCY_RATE"
           TopLeft="78,177" />
@@ -281,6 +232,55 @@
           Size="325,317"
           Id="Package\Staging Area for Facts\SF_CURRENCY_RATE"
           TopLeft="527,223" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Staging Area for Facts\SF_SAMPLE_RATE\SF_SAMPLE_RATE"
+          TopLeft="78,177" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Staging Area for Facts\SF_SAMPLE_RATE\TRUNCATE"
+          TopLeft="34,27" />
+        <EdgeLayout
+          Id="Package\Staging Area for Facts\SF_SAMPLE_RATE.PrecedenceConstraints[Vincolo]"
+          TopLeft="103.5,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64,108"
+              Start="0,0"
+              End="64,100.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50"
+                    Point2="0,54"
+                    Point3="4,54" />
+                  <mssgle:LineSegment
+                    End="60,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="60,54"
+                    Point2="64,54"
+                    Point3="64,58" />
+                  <mssgle:LineSegment
+                    End="64,100.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="320,292"
+          Size="320,335"
+          Id="Package\Staging Area for Facts\SF_SAMPLE_RATE"
+          TopLeft="86,56" />
         <EdgeLayout
           Id="Package\Staging Area for Facts.PrecedenceConstraints[Vincolo]"
           TopLeft="406,223.5">

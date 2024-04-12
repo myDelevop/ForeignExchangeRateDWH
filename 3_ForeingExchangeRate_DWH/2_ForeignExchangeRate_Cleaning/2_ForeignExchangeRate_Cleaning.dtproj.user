@@ -9,7 +9,7 @@
         <WinAuthUserName />
         <WinAuthDomain />
         <ServerName>localhost</ServerName>
-        <PathOnServer>/SSISDB/2_ForeignExchangeRate_Cleaning/2_ForeignExchangeRate_Cleaning</PathOnServer>
+        <PathOnServer>/SSISDB/2_ForeingExchangeRate_Cleaning/2_ForeignExchangeRate_Cleaning</PathOnServer>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>
